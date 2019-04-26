@@ -1,0 +1,169 @@
+/* pages/login/login.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+}
+.cBody{
+  width: 84%;
+  height: 100%;
+  margin: auto;
+}
+.inputBox{
+  width: 100%;
+  height: auto;
+}
+.box{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #d1d1d1;
+  margin-bottom: 40rpx;
+  padding-bottom: 8rpx;
+}
+.box:last-child{
+  margin-bottom: 0;
+}
+.inputPic{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #000000;
+  text-align: justify;
+}
+.phonePic{
+  width: 32rpx;
+  height: 42rpx;
+  margin-top: 2rpx;
+}
+.codePic{
+  width: 32rpx;
+  height: 36rpx;
+  margin-top: 4rpx;
+}
+.namePic{
+  width: 32rpx;
+  height: 38rpx;
+  margin-top: 2rpx;
+}
+.input{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #666666;
+  padding: 0;
+}
+.phcolor{  
+  color: #999999;  
+}
+.inputB{
+  width: 80%;
+}
+.inputS{
+  width: 63%;
+}
+.leabers{
+  font-size: 30rpx;
+  text-align: right;
+  color: #6ea8f7;
+} 
+.leabers2{
+ display: inline-block;
+  width: 140rpx;
+ 
+  font-size: 30rpx;
+  text-align: right;
+  color: #6ea8f7;
+}
+.sendCode{
+  padding: 0;
+  font-size: 28rpx;
+  text-align: center;
+  color: #6ea8f7;
+  margin-right: 10rpx;
+}
+.number{
+  margin-right: 6rpx;
+}
+.subBox{
+  width: 100%;
+  margin-top: 80rpx;
+  padding: 0;
+}
+.subBtn{
+  width: 100%;
+  height: 100rpx;
+  font-size: 34rpx;
+  padding: 0;
+  line-height: 100rpx;
+  background: #6ea8f7;
+  color: #ffffff;
+  border-radius: 50rpx;
+  border: none;
+}
+.section{
+  width: 100%;
+}
+.checkBox{
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-top: 28rpx;
+}
+.line{
+  font-size: 24rpx;
+  color: #9e9e9e;
+  line-height: 28rpx;
+}
+.agreePic{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.agreement{
+  font-size: 24rpx;
+  color: #6ea8f7;
+}
+.mfklogo{
+  width: 100%;
+  margin-top: 100rpx;
+  margin-bottom: 86rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mfklogo image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  border:2rpx solid #e0e0e0;
+}
+.register{
+  width: 100%;
+  position: absolute;
+  bottom: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.register text:nth-child(1){
+  color: #666666;
+}
+.register text:nth-child(2){
+  color: #6ea8f7;
+}
+/* 错误提示 */
+.msgBox{
+  width: 300rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 50%;
+  margin-left: -150rpx;
+  top: 36%;
+  line-height: 80rpx;
+  text-align: center;
+}
+.errorMsg{
+  font-size: 26rpx;
+}

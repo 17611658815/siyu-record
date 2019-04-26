@@ -1,0 +1,16 @@
+<!--pages/status/status.wxml-->
+<view class="container">
+  <view class="statusBox">
+    <view class="status" wx:if="{{status == 'audit'}}">
+      <image class="statusPic db" src="../../images/audit.png"></image>
+      <text class="statusImp db">工作人员正在努力审核中，请耐心等待，</text>
+      <text class="statusImp db">感谢您的支持与理解！</text>
+    </view>
+    <view class="status" wx:if="{{status == 'unpassed'}}">
+      <image class="statusPic db" src="../../images/unpassed.png"></image>
+      <text class="statusImp db">抱歉，您输入的信息有误，</text>
+      <text class="statusImp db">审核未能通过。请重试~</text>
+      <text class="registeBtn db" bindtap="goRegiste">重新注册</text>
+    </view>
+  </view>
+</view>

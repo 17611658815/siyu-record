@@ -1,0 +1,18 @@
+/* component/searchHilightTextView.wxss */
+.listCommon text {
+  width: 100%;
+  height: 40rpx;
+  font-family: PingFangSC;
+  font-size: 28rpx;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.highlight {
+ color: #6E9FF7;
+}
+.normal {
+  color: #484848;
+}

@@ -1,0 +1,17 @@
+
+<!--常见问题  -->
+<!--  -->
+<view class='problem' wx:if="{{paroblem}}">
+  <view class='problemList' wx:for="{{problemList}}">
+   <view wx:if="{{item.pay_show == '0'}}">{{index+1}}、{{item.ask}}</view>
+   <view wx:if="{{item.pay_show == '0'}}">{{item.answer}}</view>
+  </view>
+</view>
+
+
+<view class='problem' wx:if="{{!paroblem}}">
+  <view class='problemList' wx:for="{{problemList}}">
+   <view wx:if="{{item.pay_show == '1'}}">{{index+1}}、{{item.ask}}</view>
+   <view wx:if="{{item.pay_show == '1'}}">{{item.answer}}</view>
+  </view>
+</view>

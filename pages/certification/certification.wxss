@@ -1,0 +1,403 @@
+/* pages/nextStep/nextStep.wxss */
+
+.title {
+  width: 100%;
+  font-size: 24rpx;
+  color: #666;
+  background: #f8f8f8;
+  padding: 24rpx 0;
+  padding-left: 20rpx;
+}
+
+.infoBox {
+  width: 100%;
+  margin: auto;
+  border-bottom: 20rpx solid #f8f8f8;
+}
+
+.idcard_content {
+  width: 95%;
+  margin: auto;
+  padding-bottom: 40rpx;
+}
+
+.idcard_title {
+  padding-top: 40rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+  background: #fff;
+}
+
+.example {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.ex_box {
+  position: relative;
+}
+
+.ex_box>view {
+  width: 100%;
+  height: 43rpx;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 43rpx;
+  position: absolute;
+  bottom: 10rpx;
+  left: 0;
+}
+
+.ex_box > image {
+  width: 345rpx;
+  height: 216rpx;
+  border: 1rpx solid #d1d1d1;
+}
+
+.example_add {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.txt_1 {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.txt_2 {
+  font-size: 26rpx;
+  color: #666;
+  margin-top: 16rpx;
+  margin-bottom: 40rpx;
+}
+
+.txt_3 {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.txt_3 view {
+  margin-top: 10rpx;
+}
+
+.imgBox {
+  width: 345rpx;
+  height: 216rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.imgBox .del{
+  width: 64rpx;
+  height: 64rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.delicon{
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 32rpx;
+  font-size: 60rpx;
+  border-radius: 50%;
+  background: #F44040;
+  color: #ffffff;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+}
+
+.imgBox .itemIMg {
+  width: 100%;
+  height: 100%;
+}
+
+.shangchuan {
+  width: 345rpx;
+  height: 216rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 10rpx;
+  color: #333;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+shangchuan>view {
+  margin: auto;
+}
+
+.shangchuan image {
+  display: block;
+  width: 69rpx;
+  height: 69rpx;
+  margin-bottom: 20rpx;
+}
+
+.docxy {
+  width: 95%;
+  margin: auto;
+}
+
+.docxy {
+  padding-top: 40rpx;
+}
+
+.docxy view:nth-child(1) {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.docxy view:nth-child(2) {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.subbtn {
+  width: 90%;
+  font-size: 34rpx;
+  color: #fff;
+  background: #6ea8f7;
+  margin-top: 90rpx;
+  margin-bottom: 50rpx;
+  border-radius: 44px 44px 44px 44px;
+}
+
+.section {
+  width: 90%;
+  margin: auto;
+}
+
+.checkBox {
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-top: 28rpx;
+}
+
+.line {
+  font-size: 24rpx;
+  color: #9e9e9e;
+  line-height: 28rpx;
+}
+
+.agreePic {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+
+.agreement {
+  font-size: 24rpx;
+  color: #6ea8f7;
+}
+
+.mfklogo {
+  width: 100%;
+  margin-top: 100rpx;
+  margin-bottom: 86rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mfklogo image {
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 50%;
+}
+
+.register {
+  width: 100%;
+  position: absolute;
+  bottom: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.register text:nth-child(1) {
+  color: #666;
+}
+
+.register text:nth-child(2) {
+  color: #6ea8f7;
+}
+
+.tost {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.tost_box {
+  width: 620rpx;
+  height: 359rpx;
+  z-index: 9999999;
+  background: #fff;
+  border-radius: 20rpx;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1rpx solid #d1d1d1;
+  padding-top: 50rpx;
+  padding-bottom: 60rpx;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.top image {
+  width: 76rpx;
+  height: 76rpx;
+}
+
+.top view {
+  margin-top: 15rpx;
+}
+
+.btom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  color: #6ea8f7;
+}
+.btnBox{
+  width: 100%;
+  height: 160rpx;
+}
+
+
+.cameraBox{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.cameraBox camera{
+  flex: 1;
+}
+.cameraBox button{
+  width: 100%;
+  height: 100rpx;
+  border-radius: 0;
+  background: #6ea8f7;
+}
+.cameraBox image{
+   flex: 1;
+   margin:0 auto;
+}
+.btnBoxs{
+  display: flex;
+}
+button::after{
+  border: none
+}
+
+.initiate{
+  text-align: center;
+}
+.initiate image{
+  width: 140rpx;
+  height: 140rpx;
+}
+
+page{
+  height: 100%;
+}
+.view{
+  width: 100%;
+  height: 100%;
+}
+.window{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.window-2{
+  display: flex;
+  flex-direction: row;
+}
+.camera{
+  width: 100%;
+  height: 100%;
+}
+ 
+.cover-1{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  background-color: #dedcdc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 60rpx;
+  left: 300rpx;
+}
+.cover-3{
+  position: absolute;
+  bottom: 105rpx;
+  left:135rpx;
+}
+.cover-9{
+  width: 728rpx;
+  height: 80%;
+  margin: 40rpx 10rpx;
+  border:2rpx solid;
+  border-radius:5px;  
+}
+button{
+  width: 100%;
+}
+.cover-4{
+  position: absolute;
+  top: 60rpx;
+  right:40rpx;
+}
+.cover-2{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 110rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color:#da2121;
+  font-size: 32rpx;
+}
+.btnconter{
+  width: 96%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+.primary{
+  background: #6ea8f7;
+  color: white;
+  border: none;
+}

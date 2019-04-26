@@ -1,0 +1,352 @@
+/* pages/center/center.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100rpx;
+  /* background: #f8f8f8; */
+}
+
+.userInfo {
+  width: 100%;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+}
+
+
+.picBoxs {
+  width: 114rpx;
+  height: 114rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 30rpx;
+}
+
+.mineBg {
+  width: 100%;
+  height: 100%;
+}
+
+.user {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.picBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.userPic {
+  width: 114rpx;
+  height: 114rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 30rpx;
+}
+
+.nameBox {
+  width: 522rpx;
+}
+
+.userName {
+  width: 200rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  color: #fff;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.position {
+  color: #fff;
+  font-size: 28rpx;
+  margin-top: 18rpx;
+  line-height: 28rpx;
+}
+
+.arrow {
+  width: 19rpx;
+  height: 34rpx;
+  margin-top: 100rpx;
+  margin-right: 30rpx;
+}
+
+.msgBox {
+  width: 694rpx;
+  padding: 0 28rpx;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.msgBox2 {
+  width: 694rpx;
+  padding: 0 28rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom: 50px;
+}
+
+.msgBox3 {
+  width: 694rpx;
+  padding: 0 28rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom: 50px;
+  border-top: 20rpx solid #f8f8f8f8;
+}
+
+.msgList {
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.msgList2 {
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  font-size: 30rpx;
+  color: #6ea8f7;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.tagPic {
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 32rpx;
+}
+
+.tagPic2 {
+  width: 43rpx;
+  height: 43rpx;
+  margin-top: 32rpx;
+}
+
+.msgTitle {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 30rpx;
+  line-height: 110rpx;
+}
+
+.arrowRight {
+  width: 18rpx;
+  height: 30rpx;
+  margin-top: 40rpx;
+}
+
+.msgNum {
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 24rpx;
+  margin-top: 36rpx;
+}
+
+/*自定义tabbar样式*/
+
+.tabbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0rpx;
+  background-color: #fff;
+  height: 96rpx;
+  width: 100%;
+  border-top: 2rpx solid #ededed;
+}
+
+.barBtn {
+  flex: 1;
+}
+
+.btnIcon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 8rpx auto;
+}
+
+.btnName {
+  font-size: 20rpx;
+  color: #929294;
+  text-align: center;
+}
+
+.active {
+  color: #6ea8f7;
+}
+
+.monay {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 30rpx;
+}
+
+.monay text:nth-child(1) {
+  color: #fff;
+  font-size: 32rpx;
+  margin-right: 24rpx;
+}
+
+.monay text:nth-child(2) {
+  color: white;
+  font-size: 50rpx;
+}
+
+.margin {
+  border-top: 3px solid #d3d3d3;
+}
+
+/*  提示框*/
+
+.msgBoxs {
+  width: 300rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 50%;
+  margin-left: -150rpx;
+  top: 36%;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.bodernoen {
+  border: none;
+}
+
+.userMsg {
+  font-size: 26rpx;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.delmsg {
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  color: #000;
+  border: #b2b3b4 2rpx solid;
+  background: none;
+  margin: auto;
+  margin-top:75rpx;
+}
+.delmsg2 {
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  color: #000;
+  border: #b2b3b4 2rpx solid;
+  background: none;
+  margin: auto;
+  margin-top:120rpx;
+}
+.delmsg3 {
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  color: #000;
+  border: #b2b3b4 2rpx solid;
+  background: none;
+  margin: auto;
+  margin-top:180rpx;
+}
+.delmsg4 {
+  width: 250rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  color: #000;
+  border: #b2b3b4 2rpx solid;
+  background: none;
+  margin: auto;
+  margin-top:210rpx;
+}
+.fastTitleBox{
+  width: 660rpx;
+  height: 88rpx;
+  padding: 0 53rpx;
+  line-height: 88rpx;
+  background: #f8f8f8f8;
+}
+.fastTitle{
+  font-size: 28rpx;
+  color: #ff7f29;
+}
+.fastBtn{
+  width: 136rpx;
+  height: 60rpx;
+  background: #6E9FF7;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 75rpx;
+  margin-top: 15rpx;
+}
+.lsitBox{
+  width: 92%;
+  margin: auto;
+  margin-top: 170rpx;
+}
+.goMFK{
+  border: 1rpx solid #ffffff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  padding: 5rpx 10rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+.rights {
+width:17rpx;
+height:35rpx
+}

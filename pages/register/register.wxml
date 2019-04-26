@@ -1,0 +1,126 @@
+<scroll-view class='content' style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true">
+  <view class='container' catchtap='upList'>
+    <view class="inputBox">
+      <!-- 姓名 -->
+      <view class="phoneBox">
+        <image class="inputPic1" src="../../images/user.png"></image>
+        <input class="inputB input db fl" placeholder-class="phcolor" value='{{docInfo.userInfo}}' placeholder="真实姓名" bindinput="saveUser"></input>
+      </view>
+      <!-- 身份证号 -->
+      <!-- <view class="phoneBox">
+        <image class="inputPic11" src="../../images/idcard.png"></image>
+        <input class="inputB input db fl" type='number' placeholder-class="phcolor" value='{{docInfo.idcard}}' placeholder="身份证号" bindinput="saveidcard"></input>
+      </view> -->
+     
+      <!-- 出诊科室 -->
+      <!-- <view class="phoneBox">
+        <image class="inputPic3" src="../../images/administrative.png"></image>
+        <input class="inputB input db fl" placeholder-class="phcolor" value='{{docInfo.deskInfo}}' placeholder="出诊科室" bindinput="savedesk"></input>
+      </view> -->
+      
+      <!-- 手机号 -->
+      <view class="phoneBox">
+        <image class="inputPic5" src="../../images/shouji.png"></image>
+        <input class="inputB input db fl" type='number' placeholder-class="phcolor" value='{{docInfo.phoneInfo}}' placeholder="手机号" bindinput="savePhone"></input>
+      </view>
+      <!-- 短信验证 -->
+      <view class="phoneBox">
+        <image class="inputPic6" src="../../images/securitycode.png"></image>
+        <input class="inputS input db fl" placeholder-class="phcolor" value='{{docInfo.codeInfo}}' placeholder="短信验证码" bindinput="saveCode"></input>
+        <label class='leabers' bindtap='sendCode' wx:if="{{noSend}}">获取验证码</label>
+        <label class='leabers2' wx:if="{{!noSend}}">{{num}}s</label>
+      </view>
+      <!-- 选择科室 -->
+      <!-- <view class="phoneBox2">
+        <image class="inputPic3" src="../../images/administrative.png"></image>
+        <view class='phoneBox2_box'>
+          <text wx:if="{{zhicheng}}">科室</text>
+          <text style='color:#666666' wx:if="{{!zhicheng}}">{{title}}</text>
+          <view>
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+              <view class="picker">
+                <image wx:if="{{isshow}}" src='../../images/downArrow.png'></image>
+                <view class="picker" wx:if="{{!isshow}}">
+                  {{multiArray[0][multiIndex[0]]}}-{{multiArray[1][multiIndex[1]]}}
+                </view>
+              </view>
+              <view wx:if="{{!rankShow}}" class="picker"></view>
+            </picker>
+          </view>
+        </view>
+      </view> -->
+       <!-- 医院 -->
+      <view class="phoneBox" style='margin-bottom:0'>
+        <image class="inputPic2" src="../../images/hospital.png"></image>
+        <input class="inputB input db fl"  placeholder-class="phcolor" value='{{docInfo.hospitalInfo}}' placeholder="所在医院" bindinput="savehospital"></input>
+      </view>
+      <view class='hospitalBox' wx:if='{{searchResultDatas.length>0}}'>
+        <view class='item_box' wx:for='{{searchResultDatas}}'>
+        <searchHighlightTextView class="result-item" catchtap='chooseHospital' datas='{{searchData[index]}}' data-id="{{item.id}}" data-val='{{item.name}}' />
+        </view>
+         <!-- <view bindtap='upList' class='upList'>收起</view> -->
+      </view>
+      <!-- 手动输入科室 -->
+       <view class="phoneBox" style='margin-top:40rpx'>
+         <image class="inputPic3" src="../../images/administrative.png"></image>
+        <input class="inputB input db fl"  placeholder-class="phcolor" value='{{docInfo.deskInfo}}' placeholder="所在科室" bindinput="savedesk"></input>
+      </view>
+      <!-- 选择职称 -->
+      <view class="phoneBox2">
+          <image class="inputPic8" src="../../images/position.png"></image>
+          <view class='phoneBox2_box'>
+            <view class='text' wx:if="{{zhicheng}}">请选择职称</view>
+            <view class='text' style='color:#666666' wx:if="{{!zhicheng}}">{{title}}</view>
+            <view>
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{arrayName}}">
+                <view class="picker">
+                  <image wx:if="{{isshow}}" src='../../images/downArrow.png'></image>
+                  <view class="picker" wx:if="{{!isshow}}">
+                    当前选择：{{arrayName[index]}}
+                  </view>
+                </view>
+                <view wx:if="{{!rankShow}}" class="picker"></view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      <!-- 擅长疾病 -->
+      <view class="phoneBox" style='border:none'>
+        <image class="inputPic7" src="../../images/adept.png"></image>
+        <text class='txt'>擅长疾病</text>
+        <text class='txt2'>重要</text>
+      </view>
+      <view class='textareaBox'>
+        <view class='add'>
+          <input placeholder-class="phcolor2" value='{{inpval}}' bindinput='addadep' placeholder='请输入您擅长的疾病名称'></input>
+          <view bindtap='addPuhs'>
+            添加
+          </view>
+        </view>
+        <view class="hintText">请逐个添加您擅长的疾病,点击右侧 “添加” 完成</view>
+        <view class='addtitle' wx:if="{{docInfo.adeptInfo!=0}}">已添加的疾病</view>
+        <view class='adeptlist' wx:if="{{docInfo.adeptInfo!=0}}">
+          <view wx:for="{{docInfo.adeptInfo}}">
+            {{item}}
+            <view data-index='{{index}}' bindtap='deladep' class='delicon'>-</view>
+          </view>
+        </view>
+        <button class='nextStep' bindtap='checkCode'>注册</button>
+        <view class="section">
+          <checkbox-group class="checkBox clearfix" name="checkbox">
+            <image class="agreePic db fl" src="../../images/unchecked.png" bindtap="checkboxChange" wx:if="{{agree == false}}"></image>
+            <image class="agreePic db fl" src="../../images/checked.png" bindtap="checkboxChange" wx:else></image>
+            <label class="line fl">阅读并同意
+              <text class="agreement" bindtap="goAgreement">《民福康医生作者授权书》</text>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</scroll-view>
+ <view class='register' wx:if="{{docInfo.adeptInfo==0 &&searchResultDatas.length == 0}}">
+    <text>已有账号？</text>
+<text bindtap='goLogin'>立即登录</text> </view>

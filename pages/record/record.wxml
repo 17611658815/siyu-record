@@ -1,0 +1,254 @@
+<!--record.wxml-->
+
+<view class="container">
+  <view class='shade' wx:if="{{shadeHiden}}"></view>
+  <view class='flowPath'>
+    <view>
+      <view class='view_1'>
+        <view class='flow_2 {{ progress==0 ? "flow_1":""}}'>
+          <image class='img_1' wx:if="{{progress==0}}" src='../../images/img_1.png'></image>
+          <image class='img_1' src='../../images/img_2.png' wx:else></image>
+        </view>
+        <view class='txt_1'>录音</view>
+      </view>
+      <image class='right' src='../../images/right.png'></image>
+      <view class='view_1'>
+        <view class='flow_2 {{ progress==1 ? "flow_1":""}}'>
+          <image class='img_2' wx:if="{{progress==1}}" src='../../images/img_4.png'></image>
+          <image class='img_2' src='../../images/img_3.png' wx:else></image>
+        </view>
+        <view class='txt_1'>
+          <text>听录音</text>
+          <text>校对文字</text>
+        </view>
+      </view>
+      <image class='right' src='../../images/right.png'></image>
+      <view class='view_1'>
+        <view class='flow_2 {{ progress==2 ? "flow_1":""}}'>
+          <image class='img_3' wx:if="{{progress==2}}" src='../../images/img_6.png'></image>
+          <image class='img_3' src='../../images/img_5.png' wx:else></image>
+        </view>
+        <view class='txt_1'>
+          <text>提交</text>
+          <text>等待审核</text>
+        </view>
+      </view>
+    </view>
+    <view bindtap='recordingHint'>答题前必读,可提高通过率 > </view>
+  </view>
+  <!-- 录音区域 -->
+  <view class='content'>
+    <view class='boxs'>
+      {{title.title}}
+    </view>
+    <view class='askNum' wx:if='{{is_self !=1 }}'>
+      <view style='color:#666'>{{title.ask_num}}人在寻求此问题答案</view>
+      <view bindtap='nextMsg' class='next'>跳过此题</view>
+    </view>
+  </view>
+
+  <view class='audioMsg'>
+    <view class='suggest' wx:if="{{src==''}}">
+      <view class='suggest_view'>
+
+      </view>
+    </view>
+    <view class='hint' wx:if="{{isShow && src ==''}}">
+      <view>请选择安静的环境，佩戴耳机录制效果更佳</view>
+      <view>时长30秒-3分钟</view>
+    </view>
+    <view class='hint' wx:if="{{!isShow && src == ''}}"></view>
+    <view class='audioBox'>
+      <view class='audiosBox' wx:if="{{src!=''}}">
+        <view class='showdo' wx:if="{{shade}}"></view>
+        <view class="audioOpen" bindtap="listenerButtonPlay" wx:if="{{!isOpen}}">
+          <!-- 第一次点击播放 -->
+          <image class='image2' src="../../images/play.png" />
+        </view>
+        <view class="audioOpen" bindtap="Play" wx:if="{{isOpen2}}">
+          <image class='image2' src="../../images/play.png" />
+          <!--播放 -->
+        </view>
+        <view class="audioOpen" bindtap="listenerButtonPause" wx:if="{{!isOpen2 && isOpen}}">
+          <image src="../../images/pause.png" />
+        </view>
+        <view class='slid'>
+          <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+          <view>
+            <text class='times'>{{starttime}}</text>
+            <!-- 进度时长 -->
+
+            <text class='times'>{{durations}}</text>
+            <!-- 总时长 -->
+          </view>
+        </view>
+      </view>
+      <view class='arayBox' wx:if="{{record_txt!='' && src!=''}}">
+        <view class='content'>
+          <view class='boxs'>
+            {{title.title}}
+          </view>
+          <!-- <view class='askNum' wx:if='{{is_self !=1 }}'>
+            <view style='color:#666'>{{title.ask_num}}人在寻求此问题答案</view>
+            <view bindtap='nextMsg' class='next'>跳过此题</view>
+          </view> -->
+        </view>
+        <!-- <view class='arayBox' wx:if="{{record_txt!=''}}"> -->
+        <view class='audiosBox2' wx:if="{{src!=''}}">
+          <view class='showdo' wx:if="{{shade}}"></view>
+          <view class="audioOpen" bindtap="listenerButtonPlay" wx:if="{{!isOpen}}">
+            <!-- 第一次点击播放 -->
+            <image class='image2' src="../../images/play.png" />
+          </view>
+          <view class="audioOpen" bindtap="Play" wx:if="{{isOpen2}}">
+            <image class='image2' src="../../images/play.png" />
+            <!--播放 -->
+          </view>
+          <view class="audioOpen" bindtap="listenerButtonPause" wx:if="{{!isOpen2 && isOpen}}">
+            <image src="../../images/pause.png" />
+          </view>
+          <view class='slid'>
+            <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+            <view>
+              <text class='times'>{{starttime}}</text>
+              <!-- 进度时长 -->
+
+              <text class='times'>{{durations}}</text>
+              <!-- 总时长 -->
+            </view>
+          </view>
+        </view>
+        <textarea class='txt_ar' fixed="true" bindinput='getarertext' maxlength="-1" placeholder-class='fontSize' value='{{record_txt}}'>
+        </textarea>
+        <view class='buttonBox'>
+          <button bindtap='remake'>重录</button>
+          <button class='addBtn' bindtap='subAudioTxt'>提交</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="recordBox" wx:if="{{record_txt ==''}}">
+    <view class="recordHead">
+      <view class='box' wx:if="{{isHiden}}">
+        <view class="beforeRecord" wx:if="{{isSpeaking}}">
+          <view class='btnBoxs' wx:if="{{src ==''}}">
+            <view class="recordBtnStart" bindtap="startRecording">
+            </view>
+            <view class='dianji' hidden="{{flage && textShow}}">点击图标进行录制</view>
+          </view>
+          <view class='btnBoxs2' wx:if="{{src !=''}}">
+            <view class="recordBtnStarts" bindtap="startRecording">{{text}}</view>
+            <view class="addaudio" data-path="{{src}}" catchtap="getreacr">
+              <view class='txt'>校对</view>
+              <view class='txt'>文字</view>
+            </view>
+            <view class="delaudio" bindtap="delaudio">删除</view>
+          </view>
+          <view class='dianji' wx:if="{{textShow}}">点击图标进行录制</view>
+        </view>
+        <view class="beforeRecord" wx:if="{{!isSpeaking}}">
+          <view class="timeBox">
+            <text class="time">{{minute}}:{{second}}</text>
+          </view>
+          <view class='viewBox'>
+            <view class="reRecord" bindtap="reRecording">重录</view>
+
+            <view wx:if="{{isPucse}}" class='isPause'>
+              <image class="pauseBtn" src="../../images/zanting.png" bindtap="pauseRecording"></image>
+            </view>
+            <view class='isPause2' wx:if="{{isPlay}}">
+              <image class="pauseBtn" src="../../images/bofang.png" bindtap="resumeRecording"></image>
+            </view>
+
+            <view class="finishRecord" wx:if="{{num > 29}}" style='background:{{colors}};' bindtap="stopRecording">完成</view>
+            <view class="finishRecord" style='background:{{colors}};' bindtap='prompt' wx:else>{{timeOrder}}s</view>
+          </view>
+        </view>
+      </view>
+      <view class='box' wx:if="{{!isHiden}}">
+
+      </view>
+    </view>
+  </view>
+  <!-- 播放区域 -->
+  <view class='tooltip' wx:if="{{tooltip}}">
+    <view class='tooltip_txt'>
+      <view class='textContent'>
+        <view class='title'>一、录音注意事项</view>
+        <view class='texts'>
+          <view> 1、</view>
+          <view> 录音环境安静,避免噪音;</view>
+        </view>
+        <view class='texts'>
+          <view>2、</view>
+          <view> 充分准备,回答流畅并具有条理性;</view>
+        </view>
+        <view class='texts'>
+          <view>3、</view>
+          <view> 回答口语化,严禁采用生硬读文式回答,增加亲和力;</view>
+        </view>
+        <view class='texts'>
+          <view>4、</view>
+          <view> 语速平和,不宜过快;</view>
+        </view>
+        <view class='texts'>
+          <view>5、</view>
+          <view> 建议佩戴耳机录制,效果更佳。</view>
+        </view>
+
+        <view class='titles'>二、可能导致录音审核不通过的原因
+        </view>
+        <view class='texts'>
+          <view>1、</view>
+          <view> 生硬读文,不口语;</view>
+        </view>
+        <view class='texts'>
+          <view>2、</view>
+          <view> 回答问题与作者擅长科室不匹配;</view>
+        </view>
+        <view class='texts'>
+          <view>3、</view>
+          <view> 答非所问; </view>
+        </view>
+        <view class='texts'>
+          <view>4、</view>
+          <view> 植入广告;</view>
+        </view>
+        <view class='texts'>
+          <view>5、</view>
+          <view> 回答不完整; </view>
+        </view>
+        <view class='texts'>
+          <view>6、</view>
+          <view> 重点未答、表述不清; </view>
+        </view>
+        <view class='texts'>
+          <view>7、</view>
+          <view> 录音质量差、听不清; </view>
+        </view>
+        <view class='texts'>
+          <view>8、</view>
+          <view> 音量过小; </view>
+        </view>
+        <view class='texts'>
+          <view>9、</view>
+          <view> 录音时长过短。</view>
+        </view>
+      </view>
+    </view>
+    <button class='read' bindtap='read'>我已阅读</button>
+  </view>
+</view>
+<!-- <view class='fxBox' wx:if="{{!tooltip}}">
+  <view class='btn1' bindtap='goindex'>
+    <image src='../../images/sy.png'></image> 返回首页</view>
+  <view class='btn2' bindtap='gowordsToanswe'>
+    <image src='../../images/shuru.png'></image>文字回答</view>
+</view> -->
+<!-- 底部抽屉菜单 -->
+<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <action-sheet-item bindtap="deleteAudio" data-path="{{optionePath}}">删除</action-sheet-item>
+  <action-sheet-item bindtap="upLoad" data-path="{{optionePath}}">上传</action-sheet-item>
+  <action-sheet-cancel class="cancelItem">取消</action-sheet-cancel>
+</action-sheet> -->

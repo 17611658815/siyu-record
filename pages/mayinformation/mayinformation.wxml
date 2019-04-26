@@ -1,0 +1,93 @@
+<view class="fastTitleBox clearfix" wx:if='{{doctor.cooperation == ""}}'>
+  <text class="fastTitle db fl">您的的医生资质尚未认证,赶快去认证吧~</text>
+  <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+</view>
+<view class='container'>
+  <view>
+    <view>
+      <text class='left'>真实姓名</text>
+      <text class='right'>{{doctor.name}}</text>
+    </view>
+  </view>
+  <view wx:if="{{doctor.identity_code!=''}}">
+    <view>
+      <text class='left'>身份证号</text>
+      <text class='right'>{{doctor.identity_code}}</text>
+    </view>
+  </view>
+  <view wx:if="{{doctor.hospital!=''}}">
+    <view>
+      <text class='left'>医院</text>
+      <text class='right'>{{doctor.hospital}}</text>
+    </view>
+  </view>
+  <view>
+    <view>
+      <text class='left'>科室</text>
+      <text class='right'>{{doctor.department}}</text>
+    </view>
+  </view>
+  <view wx:if="{{doctor.doctor_rank!=''}}">
+    <view>
+      <text class='left'>职称</text>
+      <text class='right'>{{doctor.doctor_rank}}</text>
+    </view>
+  </view>
+  <view>
+    <view style='border:none' bindtap='gonextStep'>
+      <text class='left'>医生资质</text>
+      <view class='rightview' style='color:#F5692C'>
+        <text wx:if="{{code == 201}}">未认证</text>
+        <text wx:if="{{code == 202}}">审核中</text>
+        <text wx:if="{{code == 203}}">认证失败</text>
+        <text wx:if="{{code == 204}}">已认证</text>
+        <image class='right_img' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+  </view>
+  <view style='border-top:15rpx solid #f8f8f8'>
+    <view>
+      <text class='left'>医生头像</text>
+      <view class='rightview' style='color:#F5692C'>
+
+        <image mode="aspectFill" class="userPic db" src="{{(userInfoAvatar != '') ? userInfoAvatar : '../../images/head.png'}}"></image>
+      </view>
+
+    </view>
+  </view>
+  <view>
+    <view>
+      <text class='left'>绑定手机</text>
+      <text class='right'>{{doctor.mobile}}</text>
+    </view>
+  </view>
+  <view>
+    <view bindtap='goaddadept'>
+      <text class='left'>擅长疾病</text>
+      <view class='rightview'>
+        已发布
+        <image class='right_img' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+  </view>
+  <view bindtap='goadeptdescription'>
+    <view>
+      <text class='left'>擅长描述</text>
+      <view class='rightview'>
+        <text wx:if="{{doctor.describe == ''}}">待完善</text>
+        <text wx:else>已完善</text>
+        <image class='right_img' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+  </view>
+  <view bindtap='goindividualresume'>
+    <view>
+      <text class='left'>个人简介</text>
+      <view class='rightview'>
+        <text wx:if="{{doctor.introduction == ''}}">待完善</text>
+        <text wx:else>已完善</text>
+        <image class='right_img' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

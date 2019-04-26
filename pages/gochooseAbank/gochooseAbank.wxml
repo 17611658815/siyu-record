@@ -1,0 +1,29 @@
+
+  <!--A-Z 检索  -->
+<view class="list">
+
+<view bindtap='jumpTo' wx:for="{{keys}}" data-opt="{{index}}">{{item.v}}</view>
+
+</view>
+
+<!--银行列表  -->
+
+<scroll-view scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true" class="scr gochooseAbank">
+
+<view  wx:for="{{list}}" id="{{item.idkey}}" data-id="{{item.id}}" wx:key="*this" data-bank="{{item.name}}" class="test" bindtap='gomyBank'>
+<!-- <text class='keys'>{{item.key}}-</text> -->
+{{item.name}}
+
+</view>
+
+</scroll-view>
+   
+
+   
+
+    
+
+    
+
+    
+

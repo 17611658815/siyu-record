@@ -1,0 +1,71 @@
+<scroll-view class='content' style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true">
+  <view class='title'>
+    您上传的资料材料仅用做平台审核,绝不外泄,请放心上传
+  </view>
+  <!-- 照片上传 -->     
+  <view class='infoBox' wx:if="{{imgs[0]!=''}}">
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'><text style='color:#6ea8f7'>{{name}}</text>医生身穿工作服的上半身照片</view>
+        <view class='example_add'>
+          <view wx:for="{{imgs}}" wx:key='key' bindtap='chooseImageTap' class='imgBox' wx:if="{{imgs.length>0}}">
+            <image src='{{item}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 身份证上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生的身份证正反面照片</view>
+        <view class='example_add'>
+          <view wx:for="{{imgs2}}" wx:key='key' class='imgBox' wx:if="{{imgs2.length>0}}">
+            <image src='{{item}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 执业上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生的医师执业证书,注册证书照片</view>
+        <view class='example_add'>
+          <view wx:for="{{imgs3}}" wx:key='key' class='imgBox' wx:if="{{imgs3.length>0}}">
+            <image src='{{item}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 职称证上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生的医生职称证书照片</view>
+        <view class='example_add'>
+          <view wx:for="{{imgs4}}" wx:key='key' class='imgBox' wx:if="{{imgs4.length>0}}">
+            <image src='{{item}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 视频录制 -->
+  <view class='infoBox' wx:if="{{docInfo.self_video!=''}}">
+    <view class='idcard'>
+      <view class='idcard_content'>
+           <view class='idcard_title'> <text style='color:#6ea8f7'>{{name}}</text>医生视频化个人介绍</view>
+        <view class='videoBox'>
+           <video src='{{docInfo.self_video}}' style="width:100%;height:{{autoHeight}}px;"></video>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

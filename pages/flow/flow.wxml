@@ -1,0 +1,27 @@
+<!--pages/flow/flow.wxml-->
+<view class="container">
+  <view class="flowBox" wx:if="{{flowType == 'flow1'}}">
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_1.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_2.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_3.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_4.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_5.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_6.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_7.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/phonic_ask_8.jpg"></image>
+  </view>
+   <view class="flowBox" wx:if="{{flowType == 'flow2'}}">
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_1.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_2.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_3.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_4.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_5.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_6.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/flow_self_7.jpg"></image>
+  </view>
+   <view class="flowBox" wx:if="{{flowType == 'flow3'}}">
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/add_mfk_1.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/add_mfk_2.jpg"></image>
+    <image class="flowPic db" mode="widthFix" src="https://api.mfk.com/statics/images/mfk_flowPic/add_mfk_3.jpg"></image>
+  </view>
+</view>

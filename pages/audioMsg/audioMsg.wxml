@@ -1,0 +1,74 @@
+<scroll-view scroll-y="true" bindscrolltolower="pullUpLoad">
+  <view class='status' wx:if="{{status==0 || status==3 ||status==4}}">
+    <view>工作人员正在努力审核中,请耐心等待哦~</view>
+  </view>
+  <view class='status2' wx:if="{{status == 2}}">
+    <view>
+      <view>审核未通过的原因：{{message}}</view>
+      <view bindtap='anewRecord' style='color:#6F9EF8'>重新录制 > </view>
+    </view>
+  </view>
+  <view class='page-body'>
+    <!-- 疾病信息 -->
+    <view class='color'>
+      <view class='videoTitle'>
+        <view>{{title}}</view>
+        <view>
+          <text>{{created}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 专家信息 -->
+    <view class='doctorInfo' wx:if="{{doctor.name!=''}}">
+      <view class='InfoBox' data-id="{{audioList.doctor.id}}" bindtap='godoctorHomeanswer'>
+        <view>
+          <image mode="aspectFill" class="userPic db" src="{{(doctor.pic != '') ? doctor.pic : '../../images/head.png'}}"></image>
+        </view>
+        <view>
+          <view>
+            <text>{{doctor.name}}</text>
+            <text>{{doctor.doctor_rank}}</text>
+          </view>
+          <view>
+            <text>{{doctor.hospital}}</text>
+            <text>{{doctor.department}}</text> </view>
+        </view>
+      </view>
+      <!-- 音频播放开关  -->
+      <view class='audiosBox' wx:if="{{src!=''}}">
+
+        <view class="audioOpen" bindtap="listenerButtonPlay" wx:if="{{!isOpen}}">
+          <!-- 第一次点击播放 -->
+          <image class='image2' src="../../images/play.png" />
+        </view>
+        <view class="audioOpen" bindtap="Play" wx:if="{{isOpen2}}">
+          <image class='image2' src="../../images/play.png" />
+          <!--播放 -->
+        </view>
+        <view class="audioOpen" bindtap="listenerButtonPause" wx:if="{{!isOpen2 && isOpen}}">
+          <image src="../../images/pause.png" />
+        </view>
+        <view class='slid'>
+          <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max="{{max}}" selected-color="#4c9dee" />
+          <view>
+            <text class='times'>{{starttime}}</text>
+            <!-- 进度时长 -->
+
+            <text class='times'>{{durations}}</text>
+            <!-- 总时长 -->
+          </view>
+        </view>
+      </view>
+      <!-- 音频内容 -->
+      <view class='title'>
+        <view>
+          语音内容
+        </view>
+        <view>
+          {{answer_txt}}
+        </view>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>

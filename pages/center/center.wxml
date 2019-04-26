@@ -1,0 +1,87 @@
+<!--pages/center/center.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="fastTitleBox clearfix" wx:if='{{cooperation == ""}}'>
+    <!-- <view class="fastTitleBox clearfix"> -->
+    <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+    <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+  </view>
+  <view class="userInfo">
+    <image class="mineBg db fl" src="../../images/userBg.png"></image>
+    <view class="user">
+      <view class="picBox">
+        <image class="userPic db" mode="aspectFill" src="{{(userInfoAvatar != '') ? userInfoAvatar : '../../images/head.png'}}"></image>
+        <text class="userName db">{{nickName}}</text>
+        <text class="userMsg db" bindtap='gomayInformation'>查看·编辑个人资料 > </text>
+        <!-- <view class="monay" wx:if="{{monay.list.length>0}}" hidden='{{show}}'>
+          <text>答题收益</text>
+          <text bindtap='goMoney'>￥{{monay.total}}</text> 
+       </view> -->
+        <view class='goMFK' wx:if="{{count_num>0}}" bindtap='gomfk'>我的主页</view>
+      </view>
+    </view>
+  </view>
+  <view class="msgBox2">
+    <view class='msgList2' bindtap='goanswer'>
+      <view>
+        <image class="tagPic db fl" src="../../images/recordIcon.png"></image>
+        <text class="msgTitle db fl">我的有声问答</text>
+      </view>
+      <view>
+        <image class='rights' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+    <view class='msgList2' style='border:none' bindtap='goAskLIst'>
+      <view>
+        <image class="tagPic db fl" src="../../images/zwzd.png"></image>
+        <text class="msgTitle db fl">我的自问自答</text>
+      </view>
+      <view>
+        <image class='rights' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+
+  </view>
+  <view class='msgBox2'>
+
+  </view>
+  <view class='msgBox3'>
+    <view class='msgList2' bindtap='gofeedback'>
+      <view>
+        <image class="tagPic db fl" src="../../images/fankiu.png"></image>
+        <text class="msgTitle db fl">意见反馈</text>
+      </view>
+      <view>
+        <image class='rights' src='../../images/right_img.png'></image>
+      </view>
+    </view>
+    <view class='msgList2' bindtap='callUp'>
+      <view>
+        <image class="tagPic db fl" src="../../images/service.png"></image>
+        <text class="msgTitle db fl">客服电话</text>
+      </view>
+      <view>
+        010-59231588
+      </view>
+    </view>
+  </view>
+  <!-- 不是iphoneX 且没有没有录三证 -->
+  <button class='delmsg' wx:if="{{isIphoneX == false && cooperation == ''}}" bindtap='PullDownRefresh'>退出登录</button>
+  <button class='delmsg2' wx:if="{{isIphoneX == false && cooperation != ''}}" bindtap='PullDownRefresh'>退出登录</button>
+  <button class='delmsg3' wx:if="{{isIphoneX == true && cooperation == ''}}" bindtap='PullDownRefresh'>退出登录</button>
+  <button class='delmsg4' wx:if="{{isIphoneX == true && cooperation != ''}}" bindtap='PullDownRefresh'>退出登录</button>
+</scroll-view>
+<!-- <view bindtap='gomfk'>去mfk</view> -->
+<!-- 自定义tabbar -->
+<view class="tabbar">
+  <view class="barBtn clearfix" bindtap="goHome">
+    <image class="btnIcon db" src="../../images/home.png"></image>
+    <text class="btnName db">工作站</text>
+  </view>
+  <view class="barBtn clearfix">
+    <image class="btnIcon db" src="../../images/center_selected.png"></image>
+    <text class="btnName db active">我的</text>
+  </view>
+</view>
+<view class="msgBoxs" style="display:{{isHide}};">
+  <text class="errorMsg">退出成功</text>
+</view>

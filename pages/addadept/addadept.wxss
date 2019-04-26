@@ -1,0 +1,109 @@
+/* pages/addadept/addadept.wxss */
+.content{
+  width: 90%;
+  margin: auto;
+}
+.textareaBox{
+  width: 100%;
+  font-size: 28rpx;
+   height: 230rpx;
+}
+.add{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+ 
+}
+.add input{
+ flex: 1;
+  height: 90rpx;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  color: #666666;
+  padding-left: 20rpx;
+   border: 2rpx solid #d1d1d1;
+  border-radius: 10rpx;
+  margin-right: 24rpx;
+
+}
+.phcolor2{
+  color: #999999;  
+}
+.add view{
+  width: 120rpx;
+  height: 100%;
+  background: #6ea8f7;
+  color: #ffffff;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+
+}
+.add view image{
+  width: 41rpx;
+  height: 41rpx;
+  margin: auto;
+}
+.addtitle{
+  font-size: 28rpx;
+  color: #000000;
+  padding: 30rpx 0;
+}
+.adeptlist{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.adeptlist>view{
+  height: 60rpx;
+  border-radius: 44px 44px 44px 44px;
+  background: #6ea8f7;
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60rpx;
+  position: relative;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.delicon{
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 25rpx;
+  font-size: 50rpx;
+  border-radius: 50%;
+  background: #F44040;
+  color: #ffffff;
+  position: absolute;
+  right: -2rpx;
+  top: -7rpx;
+}
+.adept{
+  padding-top: 40rpx;
+  padding-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.nextStep{
+  width: 630rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #ffffff;
+  background: #6ea8f7;
+  font-size: 34rpx;
+  margin-top: 100rpx;
+  border-radius: 44px 44px 44px 44px;
+}
+.phcolor2{
+  color: #999999;  
+}
+.hintText{
+  margin-top: 24rpx;
+  font-size: 26rpx;
+  color: #999999;
+}

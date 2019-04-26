@@ -1,0 +1,417 @@
+/* pages/login/login.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+}
+.inputBox{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  margin-top: 50rpx;
+}
+.phoneBox{
+  width:100%;
+  height:50rpx;
+  display: flex;
+  align-items: center;
+  line-height:50rpx;
+  border-bottom:1rpx solid #d1d1d1;
+  margin-bottom:40rpx;
+  padding-bottom:8rpx;
+}
+.box{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #d1d1d1;
+  margin-bottom: 40rpx;
+  padding-bottom: 8rpx;
+}
+.box:last-child{
+  margin-bottom: 0;
+}
+.inputPic1{
+  width: 31rpx;
+  height: 38rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic11{
+  width: 42rpx;
+  height: 32rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  text-align: justify;
+}
+.inputPic2{
+  width: 34rpx;
+  height: 34rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic3{
+  width: 34rpx;
+  height: 30rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic4{
+  width: 35rpx;
+  height: 36rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic5{
+  width: 28rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic6{
+  width: 31rpx;
+  height: 36rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic7{
+  width: 36rpx;
+  height: 36rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.inputPic8{
+  width: 35rpx;
+  height: 35rpx;
+  font-size: 28rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  text-align: justify;
+}
+.input{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #666666;
+  padding: 0;
+}
+.phcolor{  
+  color: #999999;  
+}
+.inputB{
+  width: 80%;
+}
+.inputS{
+  width: 61%;
+}
+.leabers{
+  font-size: 30rpx;
+  text-align: right;
+  color: #6ea8f7;
+} 
+.leabers2{
+ display: inline-block;
+  width: 140rpx;
+  font-size: 30rpx;
+  text-align: right;
+  color: #6ea8f7;
+}
+.sendCode{
+  padding: 0;
+  font-size: 28rpx;
+  text-align: center;
+  color: #6ea8f7;
+  margin-right: 10rpx;
+}
+.number{
+  margin-right: 6rpx;
+}
+.txt{
+  font-size: 30rpx; 
+  color: #333333;
+}
+.txt2{
+  width: 46rpx;
+  height: 26rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 28rpx;
+  border-radius: 44px 44px 44px 44px;
+  font-size: 15rpx;
+  background: #F44040;
+  color: #ffffff;
+  margin-left: 20rpx;
+}
+.textareaBox{
+  width: 100%;
+  font-size: 28rpx;
+   height: 230rpx;
+}
+.nextStep{
+  width: 100%;
+  background: #6ea8f7;
+  color: #ffffff;
+  font-size: 34rpx;
+  margin-top: 50rpx;
+  border-radius: 44px 44px 44px 44px;
+  border: none;
+}
+.adeptarae{
+  width: 80%;
+  margin: 26rpx;
+  
+}
+.subBox{
+  width: 100%;
+  margin-top: 80rpx;
+  padding: 0;
+}
+.subBtn{
+  width: 100%;
+  height: 100rpx;
+  font-size: 34rpx;
+  padding: 0;
+  line-height: 100rpx;
+  background: #6ea8f7;
+  color: #ffffff;
+  border-radius: 50rpx;
+  border: none;
+}
+.section{
+  width: 100%;
+}
+.checkBox{
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-top: 28rpx;
+}
+.line{
+  font-size: 24rpx;
+  color: #9e9e9e;
+  line-height: 28rpx;
+}
+.agreePic{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.agreement{
+  font-size: 24rpx;
+  color: #6ea8f7;
+}
+.phoneBox2{
+  width:100%;
+  height:50rpx;
+  display: flex;
+  align-items: center;
+  line-height:50rpx;
+  border-bottom:1rpx solid #d1d1d1;
+  margin-bottom:40rpx;
+  margin-top: 40rpx;
+  padding-bottom:8rpx;
+}
+.phoneBox2 .text{
+  display: block;
+   width: 150rpx;
+  height: 100%;
+  font-size: 30rpx;
+  color: #999999;  
+  white-space : nowrap;
+
+}
+.phoneBox2_box{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.picker{
+  flex: 1;
+  height: 100%;
+  width: 350rpx;
+  font-size: 30rpx;
+  color: #666666;
+  text-align: right;
+}
+.picker image{
+  width: 35rpx;
+  height: 20rpx;
+}
+
+.add{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  /* border: 2rpx solid #d1d1d1;
+  border-radius: 10rpx; */
+}
+.add input{
+ flex: 1;
+  height: 90rpx;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  color: #666666;
+  padding-left: 20rpx;
+   border: 2rpx solid #d1d1d1;
+  border-radius: 10rpx;
+  margin-right: 24rpx;
+
+}
+.phcolor2{
+  color: #999999;  
+}
+.add view{
+  width: 120rpx;
+  height: 100%;
+  background: #6ea8f7;
+  color: #ffffff;
+  display: flex;
+  border-radius: 10rpx;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.add view image{
+  width: 41rpx;
+  height: 41rpx;
+  margin: auto;
+}
+.addtitle{
+  font-size: 28rpx;
+  color: #000000;
+  padding: 30rpx 0;
+}
+.adeptlist{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.adeptlist>view{
+  height: 60rpx;
+  border-radius: 44px 44px 44px 44px;
+  background: #6ea8f7;
+  padding: 0 40rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60rpx;
+  position: relative;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+}
+.delicon{
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  line-height: 25rpx;
+  font-size: 50rpx;
+  border-radius: 50%;
+  background: #F44040;
+  color: #ffffff;
+  position: absolute;
+  right: -2rpx;
+  top: -7rpx;
+}
+.hintText{
+  margin-top: 24rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.section{
+  width: 100%;
+}
+.checkBox{
+  width: 100%;
+  height: 28rpx;
+  line-height: 28rpx;
+  margin-top: 28rpx;
+}
+.line{
+  font-size: 24rpx;
+  color: #9e9e9e;
+  line-height: 28rpx;
+}
+.agreePic{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.agreement{
+  font-size: 24rpx;
+  color: #6ea8f7;
+}
+.mfklogo{
+  width: 100%;
+  margin-top: 100rpx;
+  margin-bottom: 86rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mfklogo image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  border:2rpx solid #e0e0e0;
+}
+.register{
+  width: 100%;
+  position: absolute;
+  bottom: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.register text:nth-child(1){
+  color: #666666;
+}
+.register text:nth-child(2){
+  color: #6ea8f7;
+}
+.hospitalBox{
+  padding: 40rpx 0 0 0;
+  max-height: 345rpx;
+  background: #f8f8f8;
+  font-size: 30rpx;
+  overflow: auto;
+  position: relative;
+}
+.hospitalBox .item_box{
+  padding-left: 20rpx;
+   margin-bottom: 40rpx;
+}
+.highlight {
+  color: #6ea8f7;
+}
+.upList{
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999999;
+  background: #f8f8f8;
+}

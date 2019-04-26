@@ -1,0 +1,47 @@
+/* pages/Toanswer/Toanswer.wxss */
+
+.status {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 26rpx 0;
+  font-size: 28rpx;
+  color: #ff973b;
+}
+
+.status > view {
+  width: 95%;
+  margin: auto;
+}
+
+.titleBox {
+  width: 100%;
+  padding: 30rpx 0;
+}
+
+.titleBox view {
+  width: 95%;
+  margin: auto;
+}
+
+.titleBox view:nth-child(1) {
+  font-size: 35rpx;
+  font-weight: 500;
+}
+
+.titleBox view:nth-child(2) {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+button {
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0;
+  background: #6ea8f7;
+  color: #fff;
+  font-size: 34rpx;
+  border-radius: 50rpx;
+  margin-top: 100rpx;
+}

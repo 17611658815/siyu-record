@@ -1,0 +1,56 @@
+<view class='textContent' wx:if="{{type == 1}}">
+  <view class='title'>一、注意事项</view>
+  <view class='title2'>1、录制语音</view>
+  <view class='texts'>1） 录音环境安静，避免噪音； </view>
+  <view class='texts'>2） 准备充分，回答流畅且具有条理性； </view>
+  <view class='texts'>3） 回答内容通俗易懂，严禁生硬读文、以偏概全、夸大其词； </view>
+  <view class='texts'>4） 语速、语调正常，不宜过快或过慢； </view>
+  <view class='texts'>5） 建议佩戴耳机录制、保证音质清晰。 </view>
+  <view class='title2'>2、校对文字 </view>
+  <view class='texts'>1） 文字回答内容,保证语句通顺；</view>
+  <view class='texts'>2） 请校验错别字并保证专业术语正确性； </view>
+  <view class='texts'>3） 请使用中文标点，保证断句合理性; </view>
+  <view class='texts'>4） 请删除文字内容中无意义口头语。</view>
+  <view class='title'>二、可能导致不通过审核的原因 </view>
+  <view class='texts'>1、生硬读文； </view>
+  <view class='texts'>2、回答问题与作者擅长科室不匹配； </view>
+  <view class='texts'>3、答非所问； </view>
+  <view class='texts'>4、内容涉及广告宣传；</view>
+  <view class='texts'>5、回答不完整； </view>
+  <view class='texts'>6、重点未答、表述不清； </view>
+  <view class='texts'>7、录音质量差、杂音明显； </view>
+  <view class='texts'>8、音量过小； </view>
+  <view class='texts'>9、录音时长过短； </view>
+  <view class='texts'>10、以偏概全，夸大其词；</view>
+  <view class='texts'>11、音质不流畅，停顿过多；</view>
+  <view class='texts'>12、涉及敏感内容；</view>
+  <view class='texts'>13、文字校验后字数＜100字; </view>
+  <!-- <view class='texts'>13、语音与文字不对应达15%以上；</view> -->
+</view>
+
+
+
+<view class='textContent' wx:else>
+  <view class='title_1'>答题要求</view>
+  <view class='txt'>
+    <view>1、</view>
+    <view>回答无需开场白,例如"您好,我是**医生，根据问题描述..."，直接针对问题回答即可;</view>
+  </view>
+  <view class='txt'>
+    <view>2、</view>
+    <view>回答要严谨,通俗易懂,让患者能够充分理解所要表达的意思;</view>
+  </view>
+  <view class='txt'>
+    <view>3、</view>
+    <view>回复信息中不可有任何广告信息</view>
+  </view>
+  <view class='txt'>
+    <view>4、</view>
+    <view> 回答中不的出现个人联系方式如QQ、微信、电话等;</view>
+  </view>
+  <view class='txt'>
+    <view>5、</view>
+    <view>避免模板式回复,不得利用重复性语句凑字,如：所有问题都回复,多喝水,注意清淡饮食、祝您健康等重复性内容</view>
+  </view>
+
+</view>

@@ -1,0 +1,6 @@
+<view class='content'>
+  <view class='img_box' >
+    <image src='../../images/audit.png'></image>
+    <view>工作人员正在努力审核中,请耐心等待,感谢您的支持与理解</view>
+  </view>
+</view>

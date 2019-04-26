@@ -1,0 +1,81 @@
+canvas{
+   margin-bottom: 20rpx;
+}
+.canvas {
+  width: 100%;
+  /* height: 200rpx; */
+  /* position: absolute; */
+  /* left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  /* bottom: 0;
+  left: 0; */
+  /* background: #fff; */
+  border: 1rpx solid #6EA8F7;
+  box-sizing: border-box;
+}
+
+.canvas2 {
+  width: 100%;
+  height: 1335rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+.canvas3{
+   width: 100%;
+  height: 1335rpx;
+  position: relative;
+  border-bottom: 1rpx solid #e2e2e2;
+  box-sizing: border-box;
+}
+.buttonBox {
+  width: 80%;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+.buttonBox button{
+  flex: 1;
+  border-radius: 44px;
+  background: #6EA8F7;
+  color: #ffffff;
+  margin: auto;
+}
+.buttonBoxs{
+  width: 80%;
+ display: flex;
+  margin: auto;
+}
+.buttonBoxs button{
+  width: 40%;
+ 
+  border-radius: 44px;
+  background: #6EA8F7;
+  color: #ffffff;
+ 
+  justify-content: space-between;
+  
+}
+.nameBox{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.sign{
+  /* width: 245rpx; */
+  height: 100rpx;
+  position: absolute;
+  top: 1123rpx;
+  left: 145rpx;
+  background: none;
+  color: red;
+
+}
+button::after{
+border: none;
+}

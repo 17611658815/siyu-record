@@ -1,0 +1,9 @@
+<scroll-view scroll-y="true" style='height:100%;width:100%'>
+  <view class='container'>
+    <view class='image_box'>
+      <image class="flowPic" mode="widthFix" src="https://api.mfk.com/statics/images/lyimgs/article_1.jpg"></image>
+      <image class="flowPic" mode="widthFix" src="https://api.mfk.com/statics/images/lyimgs/article_2.jpg"></image>
+      <image class="flowPic" mode="widthFix" src="https://api.mfk.com/statics/images/lyimgs/article_3.jpg"></image>
+    </view>
+  </view>
+</scroll-view>

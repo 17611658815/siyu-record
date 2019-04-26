@@ -1,0 +1,116 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100rpx;
+}
+.swiper {
+  width: 100%;
+  height: 340rpx;
+}
+.swiper image{
+  width: 100%;
+  height: 100%;
+}
+.modeule{
+  width: 100%;
+   background: #f8f8f8;
+   padding-bottom: 20rpx;
+}
+.modeuleBox{
+  width: 92%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.modeuleBox .modeuleBox_box{
+  width: 334rpx;
+  height: 360rpx; /*33vh*/
+  background: #ffffff;
+  font-size: 28rpx;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25rpx;
+}
+.modeuleBox_box>view{
+  text-align: center;
+}
+.modeuleBox_box_X>view{
+  text-align: center;
+}
+.modeuleBox .modeuleBox_box_X{
+  width: 335.5rpx;
+  /* height: 477rpx; */
+  font-size: 28rpx;
+  color: #333333;
+  margin-top: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+.hom_icon1{
+  width: 78rpx;
+  height: 78rpx;
+  margin-bottom: 10rpx;
+}
+.hom_icon4{
+  width: 88rpx;
+  height: 77rpx;
+  margin-bottom: 10rpx;
+}
+.hom_icon2{
+  width: 86rpx;
+  height: 76rpx;
+  margin-bottom: 10rpx;
+}
+.hom_icon3{
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 10rpx;
+}
+/*自定义tabbar样式*/
+
+.tabbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0rpx;
+  background-color: #fff;
+  height: 96rpx;
+  width: 100%;
+  border-top: 2rpx solid #ededed;
+}
+
+.barBtn {
+  flex: 1;
+}
+
+.btnIcon {
+  width: 46rpx;
+  height: 46rpx;
+  margin: 8rpx auto;
+}
+
+.btnName {
+  font-size: 20rpx;
+  color: #929294;
+  text-align: center;
+}
+
+.active {
+  color: #6ea8f7;
+}
+
+
+
+

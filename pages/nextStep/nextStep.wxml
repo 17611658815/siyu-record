@@ -1,0 +1,208 @@
+<scroll-view class='content' style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" wx:if="{{!videoRecording}}">
+  <view class='title'>
+    您上传的资料材料仅用做平台审核,绝不外泄,请放心上传
+  </view>
+  <!-- 照片上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生身穿工作服的上半身照片</view>
+        <view class='example'>
+          <view class='ex_box'>
+            <image src="../../images/ex_6.jpg"></image>
+            <view>示例</view>
+          </view>
+        </view>
+        <view class='example_add'>
+          <view wx:for="{{imgs}}" class='imgBox' wx:if="{{imgs.length>0}}" wx:key>
+            <view data-index='{{index}}'  catchtap='removePic' data-type='1' data-index='{{index}}' class='delicon'>-</view>
+            <image class='itemIMg' src='{{item}}'></image>
+          </view>
+          <view bindtap='chooseImageTap' data-type='1' wx:if="{{imgs.length==0}}" class='shangchuan'>
+            <view>
+              <image src="../../images/addPic.png"></image>
+              <view>上传</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 身份证上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生的身份证正反面照片</view>
+        <view class='txt_1'>1、请按照示例图上传对应的身份证正反面照片;</view>
+        <view class='txt_2'>2、请上传扫描件或彩色照片,黑白复印件无效;</view>
+        <view class='example'>
+          <view class='ex_box'>
+            <image src="../../images/ex_2.jpg"></image>
+            <view>示例</view>
+          </view>
+          <view class='ex_box'>
+            <image src="../../images/ex_5.jpg"></image>
+            <view>示例</view>
+          </view>
+        </view>
+        <view class='example_add'>
+          <view wx:for="{{imgs2}}" class='imgBox' wx:if="{{imgs2.length>0}}" wx:key>
+
+            <view data-index='{{index}}' catchtap='removePic' data-type='2' data-index='{{index}}' class='delicon'>-</view>
+            <image class='itemIMg' src='{{item}}'></image>
+          </view>
+          <view bindtap='chooseImageTap' data-type='2' hidden='{{imgs2.length>0}}' class='shangchuan'>
+            <view>
+              <image src="../../images/addPic.png"></image>
+              <view>上传</view>
+            </view>
+          </view>
+
+          <view bindtap='chooseImageTap' data-type='2' wx:if='{{imgs2.length==1}}' class='shangchuan'>
+            <view>
+              <image src="../../images/addPic.png"></image>
+              <view>上传</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 执业上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生的医师执业证书,注册证书照片,至少2张（不要上传医师资格证）</view>
+        <view class='txt_1'>1、请至少上传以下几页;</view>
+        <view class='txt_3'>
+          <view> ① 带照片那页</view>
+          <view> ② 带执业地点那页</view>
+          <view> ③ 最新的变更注册记录页</view>
+
+        </view>
+        <view class='txt_2'>2、请上传扫描件或彩色照片,黑白复印件无效;</view>
+        <view class='example'>
+          <view class='ex_box'>
+            <image src="../../images/ex_4.jpg"></image>
+            <view>示例</view>
+          </view>
+          <view class='ex_box'>
+            <image src="../../images/ex_3.jpg"></image>
+            <view>示例</view>
+          </view>
+        </view>
+        <view class='example_add'>
+          <view wx:for="{{imgs3}}" class='imgBox' wx:if="{{imgs3.length>0}}" wx:key>
+
+            <view data-index='{{index}}' catchtap='removePic' data-type='3' data-index='{{index}}' class='delicon'>-</view>
+            <image class='itemIMg' src='{{item}}'></image>
+          </view>
+          <view bindtap='chooseImageTap' data-type='3' hidden='{{imgs3.length==3}}' class='shangchuan'>
+            <view>
+              <image src="../../images/addPic.png"></image>
+              <view>上传</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 职称证上传 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+      <view class='idcard_content'>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生的医生职称证书照片</view>
+        <view class='txt_1'>1、请按照示例图上传医师职称证书照片;</view>
+        <view class='txt_2'>2、请上传扫描件或彩色照片,黑白复印件无效;</view>
+        <view class='example'>
+          <view class='ex_box'>
+            <image src="../../images/ex_1.jpg"></image>
+            <view>示例</view>
+          </view>
+        </view>
+        <view class='example_add'>
+          <view wx:for="{{imgs4}}" class='imgBox' wx:if="{{imgs4.length>0}}" wx:key>
+            <view data-index='{{index}}' catchtap='removePic' data-type='4' data-index='{{index}}' class='delicon'>-</view>
+            <image class='itemIMg' src='{{item}}'></image>
+          </view>
+          <view bindtap='chooseImageTap' data-type='4' wx:if="{{imgs4.length==0}}" class='shangchuan'>
+            <view>
+              <image src="../../images/addPic.png"></image>
+              <view>上传</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 视频录制 -->
+  <view class='infoBox'>
+    <view class='idcard'>
+    <view class='idcard_content' wx:if="{{docInfo.self_video==''}}">
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生视频化个人介绍</view>
+        <view class='txt_1'>1、请点击“开始录制”图标，进行视频化自我介绍（包含姓名、职称、医院、科室等），建议：穿工作服进行录制，时长在10S内。</view>
+        <view class='txt_2'>2、自我介绍模板：大家好！我是北京协和医院皮肤科副主任医师李帅。（供参考）</view>
+        <view class='initiate' bindtap='checkauth'>
+          <image src='../../images/initiate.png'></image>
+          <view style='font-size:35rpx;color:#6ea8f7;margin-top:15rpx;'>开始录制</view>
+        </view>
+      </view>
+      <view class='idcard_content' wx:else>
+        <view class='idcard_title'>
+          <text style='color:#6ea8f7'>{{name}}</text>医生视频化个人介绍</view>
+        <view class='videoBox'>
+          <video src='{{docInfo.self_video}}' style="width:100%;height:{{autoHeight}}px;"></video>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='infoBox' style='border:none'>
+    <view class='docxy'>
+      <view>请
+        <text style='color:#6ea8f7'>{{name}}</text>医生签署授权协议</view>
+      <view>阅读并签署
+        <text style='color:#6ea8f7' bindtap='gosignature'>民福康号作者授权书></text> </view>
+    </view>
+  </view>
+  <view class='btnBox'>
+    <button class='subbtn' bindtap='submitMsg'>提交</button>
+  </view>
+
+</scroll-view>
+<!-- 开始录像 -->
+<view class="view" wx:else>
+
+  <view class="window" wx:if="{{topRecord && !camera}}">
+    <video class="cover-9" src="{{tempVideoPath}}" poster="{{tempThumbPath}}" wx:if="{{!startRecord}}"></video>
+    <view class='btnconter'>
+      <button bindtap="open" disabled='{{on_off}}' style='background:none;color:#000000;border:1rpx solid #d1d1d1;margin-right:20rpx' type="primary">重录</button>
+      <button bindtap="saveFale" disabled='{{on_off}}' class='primary' data-type="startRecord">上传</button>
+    </view>
+  </view>
+
+  <camera class="camera" device-position="front" flash="off" wx:else>
+    <cover-view class="cover-1" bindtap="camera">
+      <cover-view class="cover-2">
+        <cover-view class="cover-5" wx:if="{{startRecord}}">{{time}}S</cover-view>
+      </cover-view>
+    </cover-view>
+  </camera>
+
+</view>
+
+<view class='tost' wx:if="{{showModel}}">
+  <view class='tost_box'>
+    <view class='top'>
+      <image src='../../images/succeed.png'></image>
+      <view>您的信息提交成功</view>
+    </view>
+    <view bindtap='goreview' class='btom'>确定</view>
+  </view>
+</view>

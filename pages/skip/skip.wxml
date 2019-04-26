@@ -1,0 +1,12 @@
+<view>
+
+  <view class='headers'>
+    <view>
+        <image src='../../images/checked.png'></image>
+        <view>注册成功</view>
+    </view>
+  </view>
+  <button class='nextStep' bindtap='goNextstep'>我要资质认证</button>
+  <button class='nextSteps' bindtap='goindex'>跳过</button>
+
+</view>

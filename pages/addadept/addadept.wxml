@@ -1,0 +1,20 @@
+<view class='content'>
+  <view class='adept'>擅长疾病</view>
+  <view class='textareaBox'>
+    <view class='add'>
+      <input placeholder-class="phcolor2" value='{{inpval}}' bindinput='addadep' placeholder='请逐个添加您擅长的疾病'></input>
+      <view bindtap='addPuhs'>
+        添加
+      </view>
+    </view>
+    <view class="hintText">请逐个添加您擅长的疾病,点击右侧 “添加” 完成</view>
+    <view class='addtitle' wx:if="{{adeptInfo!=0}}">已添加的疾病</view>
+    <view class='adeptlist' wx:if="{{adeptInfo!=0}}">
+      <view wx:for="{{adeptInfo}}">
+        {{item.item}}
+        <view data-index='{{index}}' wx:if="{{item.type == 2}}" bindtap='deladep' class='delicon'>-</view>
+      </view>
+    </view>
+    <button class='nextStep' wx:if="{{adeptInfo!=0}}" bindtap='submitMsg'>确定</button>
+  </view>
+</view>

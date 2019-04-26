@@ -1,0 +1,286 @@
+<!-- <view class="scroll-view "> -->
+ <view class='topBox'>
+      <view class="fastTitleBox clearfix">
+        <text class="fastTitle db fl">快速设置您在门诊时患者常问的问题</text>
+        <text class="fastBtn db fr" bindtap="gotoAsk">去设置</text>
+      </view>
+      <view class="swiper-tab">
+        <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+          <text class="swiperName db" data-current="0">全部</text>
+        </view>
+        <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+          <text class="swiperName db" data-current="1">待回答</text>
+        </view>
+        <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">
+          <text class="swiperName db" data-current="2">审核中</text>
+        </view>
+        <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">
+          <text class="swiperName db" data-current="3">未通过</text>
+        </view>
+        <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">
+          <text class="swiperName db" data-current="4">已通过</text>
+        </view>
+      </view>
+    </view>
+  <view class="body">
+   
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px;" bindchange="bindChange">
+      <!-- 全部回答 -->
+      <swiper-item>
+        <scroll-view style="height:100%;" bindscrolltolower="pullUpLoad" bindscrolltoupper="PullDownRefresh" scroll-y="true">
+          <view class="lsitBox" wx:if="{{listNum > 0}}">
+            <block wx:for="{{answerList}}" wx:key="index">
+              <view class="board">
+                <view class="cell">
+                  <view class="cell-bd clearfix">
+                    <view class="infoBoxL date fl" data-path='{{item.record}}' data-id='{{index}}' data-status='{{item.status}}' data-created="{{item.created}}" data-title='{{item.title}}' data-questionId='{{item.id}}' bindtap='goDetails'  data-question='{{item.record_id}}'>
+                      <view class="titleBox clearfix">
+                        <text class="infoName db fl" wx:if="{{item.title !=''}}">{{item.title}}</text>
+                        <text class="infoName db fl" style='width:{{active}}' wx:else>{{item.title}}</text>
+                        <!-- <text class='price' wx:if="{{is_pay==0}}">￥{{item.money}}</text> -->
+                      </view>
+                      <view class='timerBox'>
+                        <text class='class="stateBox fl passed' wx:if="{{item.status==1}}">已通过</text>
+                        <text class="stateBox fl review" wx:elif="{{item.status==0 || item.status==3 ||item.status==4}}">审核中</text>
+                        <text class="stateBox fl await" wx:elif="{{item.status==-1}}">待回答</text>
+                        <text class="stateBox fl noThrough" wx:if='{{item.status==2}}'>未通过</text>
+                        <text class="infoDate fl">{{item.created}}</text>
+                      </view>
+                    </view>
+                    <view class="operationBox data fr" wx:if='{{item.status != -1}}'>
+                      <image class="play db fl" bindtap="gotoPause" data-title='{{item.title}}'  data-id="{{index}}" wx:if="{{item.isplay}}" src="../../images/pause.png"></image>
+                      <image class="play db fl" bindtap="gotoPlay"  data-title='{{item.title}}' data-id="{{index}}" wx:else src="../../images/play.png"></image>
+                    </view>
+                    <view bindtap='gotoRecord' data-is_self="{{item.is_self}}" data-id='{{item.id}}' class="immediatereply" wx:else>
+                      立即回答
+                    </view>
+                  </view>
+                </view>
+                <view class="progressBox clearfix" wx:if="{{item.isplay}}">
+                  <text class="playTime db fl">{{playM}}:{{playS}}</text>
+                  <!-- <view class="smallBox fl"> -->
+                  <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max='{{max}}' selected-color="#4c9dee" />
+                  <!-- <text class="sliderBtn" style="left:{{260*item.playtime/item.duration}}px"></text> -->
+                  <!-- </view> -->
+                  <text class="totleTime db fr">{{ "0" + (((item.duration)/60)|Int)}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="noClass" wx:else>
+            <view class="noClassBox">
+              <image class="noting db" src="../../images/kb.png"></image>
+              <text class="prompt db">您尚未回答任何问题，赶快回答吧！</text>
+              <button class='goindex' bindtap='goindex'>去回答</button>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!-- 待回答 -->
+      <swiper-item>
+        <scroll-view style="height:100%;" bindscrolltolower="pullUpLoad" bindscrolltoupper="PullDownRefresh" scroll-y="true">
+          <view class="lsitBox" wx:if="{{listNum > 0}}">
+            <block wx:for="{{answerList}}" wx:key="index">
+              <view class="board" wx:if='{{item.record_id == 0}}'>
+                <view class="cell">
+                  <view class="cell-bd clearfix">
+                    <view class="infoBoxL date fl" data-path='{{item.record}}' data-id='{{index}}' data-status='{{item.status}}' data-created="{{item.created}}" data-title='{{item.title}}' data-questionId='{{item.id}}' bindtap='goDetails' data-question='{{item.record_id}}'>
+                      <view class="titleBox clearfix" data-status='{{item.status}}'>
+                        <text class="infoName db fl" wx:if="{{item.title !=''}}">{{item.title}}</text>
+                        <text class="infoName db fl" style='width:{{active}}' wx:else>{{item.title}}</text>
+                        <!-- <text class='price' wx:if="{{is_pay==0}}">￥{{item.money}}</text> -->
+                      </view>
+                      <view class='timerBox'>
+                        <text class='class="stateBox fl passed' wx:if="{{item.status==1}}">已通过</text>
+
+
+                        <text class="stateBox fl review" wx:elif="{{item.status==0 || item.status==3 ||item.status==4}}">审核中</text>
+
+                        <text class="stateBox fl await" wx:elif="{{item.status==-1}}">待回答</text>
+                        <text class="stateBox fl noThrough" wx:if='{{item.status==2}}'>未通过</text>
+                        <text class="infoDate db fl">{{item.created}}</text>
+                      </view>
+                    </view>
+                    <view class="operationBox data fr" wx:if='{{item.status != -1}}'>
+                      <image class="play db fl" bindtap="gotoPause" data-title='{{item.title}}' data-id="{{index}}" wx:if="{{item.isplay}}" src="../../images/pause.png"></image>
+                      <image class="play db fl" bindtap="gotoPlay" data-title='{{item.title}}' data-id="{{index}}" wx:else src="../../images/play.png"></image>
+                    </view>
+                    <view bindtap='gotoRecord' data-is_self="{{item.is_self}}" data-id='{{item.id}}' class="immediatereply" wx:else>
+                      立即回答
+                    </view>
+                  </view>
+                </view>
+                <view class="progressBox clearfix" wx:if="{{item.isplay}}">
+                  <text class="playTime db fl">{{playM}}:{{playS}}</text>
+                  <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max='{{max}}' selected-color="#4c9dee" />
+                  <text class="totleTime db fr">{{ "0" + ((item.duration)/60)|Int}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="noClass" wx:else>
+            <view class="noClassBox">
+              <image class="noting db" src="../../images/kb.png"></image>
+              <text class="prompt db">您尚未设置任何问题，赶快去设置吧！</text>
+              <button class='goindex' bindtap='gotoAsk'>去设置</button>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!-- 审核中 -->
+      <swiper-item>
+        <scroll-view style="height:100%;" bindscrolltolower="pullUpLoad" bindscrolltoupper="PullDownRefresh" scroll-y="true">
+          <view class="lsitBox" wx:if="{{listNum > 0}}">
+            <block wx:for="{{answerList}}" wx:key="index">
+              <view class="board">
+                <view class="cell">
+                  <view class="cell-bd clearfix">
+                    <view class="infoBoxL date fl" bindtap='goDetails' data-id='{{index}}' data-path='{{item.record}}' data-errmsg="{{item.message}}" data-status='{{item.status}}' data-questionId='{{item.id}}' data-title='{{item.title}}' data-question='{{item.record_id}}'>
+                      <view class="titleBox  clearfix">
+                        <text class="infoName db fl" wx:if="{{item.title !=''}}">{{item.title}}</text>
+                        <text class="infoName db fl" style='width:{{active}}' wx:else>{{item.title}}</text>
+                        <!-- <text class='price' wx:if="{{is_pay==0}}">￥{{item.money}}</text> -->
+                      </view>
+                      <view class='timerBox'>
+                        <text class='class="stateBox fl passed' wx:if="{{item.status==1}}">已通过</text>
+
+
+                        <text class="stateBox fl review" wx:elif="{{item.status==0 || item.status==3 ||item.status==4}}">审核中</text>
+
+                        <text class="stateBox fl await" wx:elif="{{item.status==-1}}">待回答</text>
+                        <text class="stateBox fl noThrough" wx:if='{{item.status==2}}'>未通过</text>
+                        <text class="infoDate db fl">{{item.created}}</text>
+                      </view>
+                    </view>
+                    <view class="operationBox data fr">
+                      <image class="play db fl" bindtap="gotoPause" data-title='{{item.title}}' data-id="{{index}}" wx:if="{{item.isplay}}" src="../../images/pause.png"></image>
+                      <image class="play db fl" bindtap="gotoPlay" data-title='{{item.title}}' data-id="{{index}}" wx:else src="../../images/play.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class="progressBox clearfix" wx:if="{{item.isplay}}">
+                  <text class="playTime db fl">{{playM}}:{{playS}}</text>
+                  <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max='{{max}}' selected-color="#4c9dee" />
+                  <text class="totleTime db fr">{{ "0" + ((item.duration)/60)|Int}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="noClass" wx:else>
+            <view class="noClassBox">
+              <image class="noting db" src="../../images/kb.png"></image>
+              <text class="prompt db">您还没有审核中的语音回答，赶快去回答吧~
+</text>
+              <button class='goindex' bindtap='goindex'>去回答</button>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!-- 未通过 -->
+      <swiper-item>
+        <scroll-view style="height:100%;" bindscrolltolower="pullUpLoad" bindscrolltoupper="PullDownRefresh" scroll-y="true">
+          <view class="lsitBox" wx:if="{{listNum > 0}}">
+            <block wx:for="{{answerList}}" wx:key="index">
+              <view class="board">
+                <view class="cell">
+                  <view class="cell-bd clearfix">
+                    <view class="infoBoxL date fl" bindtap='goDetails' data-id='{{index}}' data-path='{{item.record}}' data-errmsg="{{item.message}}" data-status='{{item.status}}' data-questionId='{{item.id}}' data-title='{{item.title}}' data-question='{{item.record_id}}'>
+                      <view class="titleBox clearfix">
+                        <text class="infoName db fl" wx:if="{{item.title !=''}}">{{item.title}}</text>
+                        <text class="infoName db fl" style='width:{{active}}' wx:else>{{item.title}}</text>
+                        <!-- <text class='price' wx:if="{{is_pay==0}}">￥{{item.money}}</text> -->
+                      </view>
+                      <view class='timerBox'>
+                        <text class='class="stateBox fl passed' wx:if="{{item.status==1}}">已通过</text>
+
+
+                        <text class="stateBox fl review" wx:elif="{{item.status==0 || item.status==3 ||item.status==4}}">审核中</text>
+
+                        <text class="stateBox fl await" wx:elif="{{item.status==-1}}">待回答</text>
+                        <text class="stateBox fl noThrough" wx:if='{{item.status==2}}'>未通过</text>
+                        <text class="infoDate db fl">{{item.created}}</text>
+                      </view>
+                    </view>
+                    <view class="operationBox data fr">
+                      <image class="play db fl" bindtap="gotoPause" data-title='{{item.title}}' data-id="{{index}}" wx:if="{{item.isplay}}" src="../../images/pause.png"></image>
+                      <image class="play db fl" bindtap="gotoPlay" data-title='{{item.title}}' data-id="{{index}}" wx:else src="../../images/play.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class="progressBox clearfix" wx:if="{{item.isplay}}">
+                  <text class="playTime db fl">{{playM}}:{{playS}}</text>
+                  <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max='{{max}}' selected-color="#4c9dee" />
+                  <text class="totleTime db fr">{{ "0" + ((item.duration)/60)|Int}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="noClass" wx:else>
+            <view class="noClassBox">
+              <image class="noting db" src="../../images/kb.png"></image>
+              <text class="prompt db">您还没有未通过的语音回答，赶快去回答吧~</text>
+              <button class='goindex' bindtap='goindex'>去回答</button>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!-- 已通过 -->
+      <swiper-item>
+        <scroll-view style="height:100%;" bindscrolltolower="pullUpLoad" bindscrolltoupper="PullDownRefresh" scroll-y="true">
+          <view class="lsitBox" wx:if="{{listNum > 0}}">
+            <block wx:for="{{answerList}}" wx:key="index">
+              <view class="board">
+                <view class="cell">
+                  <view class="cell-bd clearfix">
+                    <view class="infoBoxL date fl" bindtap='goDetails' data-id='{{index}}' data-path='{{item.id}}' data-errmsg="{{item.message}}" data-status='{{item.status}}' data-title='{{item.title}}' data-questionId='{{item.id}}' data-question='{{item.record_id}}'>
+                      <view class="titleBox clearfix">
+                        <text class="infoName db fl" wx:if="{{item.title !=''}}">{{item.title}}</text>
+                        <text class="infoName db fl" style='width:{{active}}' wx:else>{{item.title}}</text>
+                        <!-- <text class='price' wx:if="{{is_pay==0}}">￥{{item.money}}</text> -->
+                      </view>
+                      <view class='timerBox'>
+                        <text class='class="stateBox fl passed' wx:if="{{item.status==1}}">已通过</text>
+
+
+                        <text class="stateBox fl review" wx:elif="{{item.status==0 || item.status==3 ||item.status==4}}">审核中</text>
+                        <text class="stateBox fl await" wx:elif="{{item.status==-1}}">待回答</text>
+                        <text class="stateBox fl noThrough" wx:if='{{item.status==2}}'>未通过</text>
+                        <text class="infoDate db fl">{{item.created}}</text>
+                      </view>
+                    </view>
+                    <view class="operationBox data fr" wx:if='{{item.status != -1}}'>
+                      <image class="play db fl" bindtap="gotoPause" data-title='{{item.title}}' data-id="{{index}}" wx:if="{{item.isplay}}" src="../../images/pause.png"></image>
+                      <image class="play db fl" bindtap="gotoPlay" data-title='{{item.title}}' data-id="{{index}}" wx:else src="../../images/play.png"></image>
+                    </view>
+                    <view class="operationBox data fr" wx:else>
+                      立即回答
+                    </view>
+                  </view>
+                </view>
+                <view class="progressBox clearfix" wx:if="{{item.isplay}}">
+                  <text class="playTime db fl">{{playM}}:{{playS}}</text>
+                  <slider bindchange="sliderChange" block-size="12px" step="2" value="{{offset}}" max='{{max}}' selected-color="#4c9dee" />
+                  <text class="totleTime db fr">{{ "0" + ((item.duration)/60)|Int}}:{{(item.duration)%60<10 ? "0"+((item.duration)%60) : ((item.duration)%60)}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="noClass" wx:else>
+            <view class="noClassBox">
+              <image class="noting db" src="../../images/kb.png"></image>
+              <text class="prompt db">您还没有已通过的语音回答，赶快去回答吧~</text>
+              <button class='goindex' bindtap='goindex'>去回答</button>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 加载更多 -->
+  <view class="loadMore" wx:if="{{loading}}">
+    <view class="loadBox clearfix">
+      <image class="loadPic db fl" src="../../images/timg.gif"></image>
+      <text class="loading db fr">加载中...</text>
+    </view>
+  </view>
+<!-- </view> -->

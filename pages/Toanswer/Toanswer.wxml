@@ -1,0 +1,9 @@
+<view class='contents'>
+    <view class='status'><view>问题还未回答，赶快回答吧~</view> </view>
+    <view class='titleBox'>
+     <view>{{title}}</view>
+     <view>{{created}}</view>
+    </view>
+
+    <button bindtap='gotoRecord'>立即回答</button>
+</view>

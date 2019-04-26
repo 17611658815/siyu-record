@@ -1,0 +1,15 @@
+/* pages/flow/flow.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+.flowBox{
+  width: 100%;
+  height: auto;
+}
+.flowPic{
+  width: 100%;
+  height: auto;
+  border: none;
+}

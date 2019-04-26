@@ -1,0 +1,4 @@
+/* pages/publisharticle/publisharticle.wxss */
+.flowPic{
+  width: 100%;
+}

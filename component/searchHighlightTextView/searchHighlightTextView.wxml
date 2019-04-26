@@ -1,0 +1,8 @@
+<!--component/searchHilightTextView.wxml-->
+<view class='listCommon'>
+  <text bindtap='onTap' wx:for="{{searchArray}}" wx:key="*this" data-val='{{item}}' class="{{item == keyName ? 'highlight' : 'normal' }}">{{item}}</text>
+</view>
+
+
+
+

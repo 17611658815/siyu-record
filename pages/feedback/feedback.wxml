@@ -1,0 +1,30 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="container">
+  <view class="areaBox">
+    <view class="inputBox">
+      <textarea class="input db" placeholder="详细描述您的问题或建议,我们将及时跟进解决。（建议添加相关问题或截图）" placeholder-class="phcolor" bindinput="savemessage"></textarea>
+    </view>
+    <view class="btnBox">
+      <view class="imgBox clearfix">
+        <view class='picBox' wx:for="{{imgs}}" wx:key="key">
+          <view data-index='{{index}}' catchtap='delete1' data-index='{{index}}' class='delicon'>-</view>
+          <image class="feedPic db fl" src="{{item}}" style="margin-right:{{(index+1)%4==0 ? '0' : '12'}}px"></image>
+        </view>
+        <view class="feedpic">
+          <view class="chooseImg db fl" bindtap="chooseImageTap">
+            <image class='add' src='../../images/add_imgs.png'></image>
+          </view>
+          <view class="chooseImg db fl" wx:if="{{imgs.length>6}}" bindtap="noChoose">
+            <image class='add' src='../../images/add.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="submitBox" wx:if="{{ submitTime == 1 }}">
+    <text class="submit db" bindtap="upMessage">提交</text>
+  </view> -->
+  <view class="submitBox">
+    <text class="submit db" bindtap="upMessage">提交</text>
+  </view>
+</view>

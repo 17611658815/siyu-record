@@ -1,0 +1,269 @@
+/* pages/search/search.wxss */
+
+.search{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background: #f7f7f7;
+}
+.searchInput{
+  width: 558rpx;
+  height: 60rpx;
+  color: #666666;
+  padding: 0;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  margin-left: 35rpx;
+  border: none;
+}
+.phcolor{
+  color: #999999;
+}
+.lineShu{
+  height: 30rpx;
+  width: 2rpx;
+  background: #999999;
+  margin-top: 16rpx;
+}
+.searchIcon{
+  width: 32rpx;
+  height: 33rpx;
+  margin-top: 17rpx;
+  margin-right: 44rpx;
+}
+
+.lineShu{
+  height: 30rpx;
+  width: 2rpx;
+  background: #999999;
+  margin-top: 16rpx;
+}
+.searchIcon{
+  width: 32rpx;
+  height: 33rpx;
+  margin-top: 14rpx;
+  margin-right: 30rpx;
+   position: absolute;
+  right: 40rpx;
+
+}
+
+.houSearch{
+  width: 92%;
+  margin: auto;
+  /* margin-top: 140rpx; */
+}
+.houSearch>view:nth-child(1){
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  color: #333333;
+  display: flex;
+  justify-content: space-between
+}
+.houSearch>view:nth-child(2){
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.houSearch>view:nth-child(2)>label{
+  font-size: 30rpx;
+  color: #333333;
+  border-radius: 44px 44px 44px 44px;
+  padding: 15rpx 30rpx;
+  background: #f8f8f8;
+  margin-right: 25rpx;
+  margin-bottom: 20rpx;
+} 
+.searchBox{
+  width: 100%;
+  display: flex;
+  padding: 30rpx 0;
+  align-items: center;
+}
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-top: 1rpx solid #e2e2e2
+}
+.search-result-item {
+  width: 90%;
+  margin: auto;
+   padding: 5rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #d2d2d2d2;
+}
+/* 问题列表 */
+.commonIllnessList {
+  padding-bottom: 80rpx;
+}
+
+.commonIllnessList .question {
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+.content {
+  width: 100%;
+  padding-top: 30rpx;
+  border-radius: 10rpx;
+  border-bottom: 20rpx solid #f8f8f8;
+  position: relative;
+}
+
+.content_box {
+  width: 90%;
+  margin: auto;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 40rpx solid #f2f1f6;
+  position: absolute;
+  left: 10rpx;
+  top: -25rpx;
+}
+
+.question_title {
+  display: flex;
+}
+
+.question_title .icon-1 {
+  width: 35rpx;
+  height: 35rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 35rpx;
+  background: #6ea8f7;
+  color: #fff;
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  border-radius: 5rpx;
+  padding: 2rpx;
+}
+
+.question_title .icon-2 {
+  width: 35rpx;
+  height: 35rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 35rpx;
+  background: #e7521a;
+  color: #fff;
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  border-radius: 5rpx;
+  padding: 2rpx;
+}
+
+.question_title_title {
+  flex: 1;
+  min-height: 32rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.question_title_title image {
+  width: 47rpx;
+  height: 33rpx;
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+.docNum {
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d1d1d1;
+}
+
+.docNum>view:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+.docNum>view:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+.docNum>view:nth-child(2) .price {
+  padding: 0 10rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: red;
+  margin-right: 20rpx;
+}
+
+.docNum>view:nth-child(2) .answer {
+  width: 123rpx;
+  height: 58rpx;
+  text-align: center;
+  line-height: 58rpx;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 44px 44px 44px 44px;
+  background: #6ea7f7;
+}
+
+.docNum image {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 20rpx;
+}
+
+.docNum text {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.earnings {
+  width: 100%;
+  height: 94rpx;
+  line-height: 94rpx;
+  text-align: center;
+  font-size: 26rpx;
+  background: #f8f8f8;
+  color: #9999;
+}
+.askNum {
+  width: 100%;
+  color: #6ea8f7;
+  font-size: 26rpx;
+  margin-top: 24rpx;
+  margin-bottom: 30rpx;
+}
+.nomsg{
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nomsg>view{
+  margin:auto;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 240rpx;
+}
+.msg1{
+  margin-top: 20rpx;
+}
+.msg2{
+  width: 70%;
+  margin: auto;
+   margin-top: 20rpx;
+   line-height: 2;
+}
+.nomsg>view>image{
+  width: 440rpx;
+  height: 321rpx;
+}

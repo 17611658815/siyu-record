@@ -1,0 +1,69 @@
+<view class='contents' wx:if="{{code2 == false}}">
+  <view class='img_box2'> 
+    <image src='../../images/shenheshibai.png'></image>
+    <view class='titles1'>您的资质未通过审核,工作站暂时无法使用</view>
+    <view class='err'>
+      <text>审核未通过原因：</text>
+      <text>{{err}}</text>
+    </view>
+  </view>
+  <button class='anewBtn' bindtap='goUploadagain'>重新认证</button>
+</view>
+<view class='contents' wx:elif="{{code == false}}">
+ <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+      <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+      <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+    </view>
+  <view class='img_box'>
+    <image src='../../images/shenhezhong.png'></image>
+    <view>您的资质正在审核中,工作站暂时无法使用</view>
+  </view>
+</view>
+<scroll-view scroll-y="true" style='height:100%;width:100%' wx:else>
+ <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+    <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+    <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+  </view>
+  <view class='container'>
+    <view class='image_box'>
+      <image class="flowPic" mode="widthFix" src="https://api.mfk.com/statics/images/lyimgs/video_1.jpg"></image>
+      <image class="flowPic" mode="widthFix" src="https://api.mfk.com/statics/images/lyimgs/video_2.jpg"></image>
+    </view>
+    <view class='videoBox'>
+      <button class='btns' bindtap='addApply'>立即预约拍摄</button>
+      <view class='title'>
+        优质视频精选
+      </view>
+
+      <view class='videoList'>
+       <view class='videoList_box'  bindtap='goVideo' data-id='{{item.id}}' wx:for="{{videoList}}"  wx:key='key'>
+          <image class='docimg' src='{{item.thumb}}'></image>
+          <view class='videoList_box_title'>{{item.title}}</view>
+          <view class='videoList_box_num'>
+            <image class='eye' src='../../images/eye.png'></image>
+            <text>{{item.tote}}</text>
+            <text>{{item.created}}</text>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+
+</scroll-view>
+
+<!-- 模态窗口 -->
+<view class='tost' style="display:{{ishide}}">
+  <view class='tost_box'>
+    <view class='top'>
+      <view class='tost_box_title'>预约拍摄申请</view>
+      <view class='textMsg'>客服会在3个工作日内与您联系</view>
+      <view class='textMsg'>并为您安排拍摄服务,确认发送拍摄申请？</view>
+    </view>
+    <view class='btom'>
+      <text style='border-right:1rpx solid #d1d1d1;color:#666666' bindtap="deselect">暂不申请</text>
+      <text style='color:#6ea8f7' bindtap="submit">确认申请</text>
+    </view>
+  </view>
+</view>

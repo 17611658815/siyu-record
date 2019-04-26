@@ -1,0 +1,71 @@
+/* pages/mayinformation/mayinformation.wxss */
+.container{
+  width: 100%;
+  margin: auto;
+}
+.container>view{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+.container>view>view{
+  width: 90%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left{
+  font-size: 26rpx;
+  color: #333333;
+}
+.right{
+   font-size: 26rpx;
+  color: #666666;
+}
+.rightview{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666666;
+}
+.right_img{
+  width: 18rpx;
+  height: 34rpx;
+  margin-left: 10rpx;
+}
+.userPic{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.fastTitleBox{
+  width: 660rpx;
+  height: 88rpx;
+  padding: 0 53rpx;
+  line-height: 88rpx;
+  background: #f8f8f8f8;
+}
+.fastTitle{
+  font-size: 28rpx;
+  color: #ff7f29;
+}
+.fastBtn{
+  width: 136rpx;
+  height: 60rpx;
+  background: #6E9FF7;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 75rpx;
+  margin-top: 15rpx;
+}
+.lsitBox{
+  width: 92%;
+  margin: auto;
+  margin-top: 170rpx;
+}

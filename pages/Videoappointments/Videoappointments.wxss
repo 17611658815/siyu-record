@@ -1,0 +1,271 @@
+.flowPic{
+  width: 100%;
+}
+.btns{
+  width: 85%;
+  font-size:34rpx;
+  color: #ffffff;
+  border-radius: 50rpx;
+  background:#6ea8f7;
+}
+.title{
+  width: 90%;
+  margin: auto;
+  margin-top: 45rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+}
+.videoList{
+  width: 90%;
+  margin: auto;
+  padding-bottom: 60rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+.videoList_box{
+  margin-top: 40rpx;
+}
+.videoList_box .docimg{
+  width: 330rpx;
+  height: 188rpx;
+}
+.eye{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.videoList_box_title{
+  width: 333rpx;
+  font-size: 28rpx;
+  color: #333333;
+  margin-top: 24rpx;
+  margin-bottom: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.videoList_box_num{
+  display: flex;
+  align-items: center;
+  font-size: 20rpx;
+  color: #9a9ca0;
+}
+.videoList_box_num text{
+  margin-right: 32rpx;
+}
+.loadmore{
+  width: 100%;
+  text-align: center;
+  padding: 40rpx 0;
+  font-size: 32rpx;
+  color: #6ea8f7;
+}
+.tost {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.tost_box {
+  width: 620rpx;
+  z-index: 9999999;
+  background: #fff;
+  border-radius: 20rpx;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.top {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1rpx solid #d1d1d1;
+  padding-top: 35rpx;
+  padding-bottom: 60rpx;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 500;
+}
+.tost_box_title{
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 20rpx;
+}
+.top image {
+  width: 76rpx;
+  height: 76rpx;
+}
+.top .textMsg{
+  font-size: 28rpx;
+  margin-top: 15rpx;
+}
+.btom {
+  width: 100%;
+  height: 109rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 109rpx;
+  font-size: 36rpx;
+}
+.btom text{
+  display: block;
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  color: #333333;
+}
+.btnBox{
+  width: 100%;
+  height: 160rpx;
+}
+button::after{
+  border: none;
+}
+.contents {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.img_box {
+  width: 80%;
+  margin: auto;
+  margin-top: 380rpx;
+}
+
+.img_box image {
+  width: 303rpx;
+  height: 209rpx;
+  margin-left: 20rpx;
+}
+
+.img_box view {
+  margin-top: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.img_box2 {
+  width: 80%;
+  margin: auto;
+  margin-top: 325rpx;
+}
+
+.img_box2 image {
+  width: 303rpx;
+  height: 209rpx;
+  margin-left: 20rpx;
+}
+
+.img_box2 .titles1 {
+  margin-top: 70rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.img_box2 .err {
+  /* text-align: left; */
+  font-size: 30rpx;
+  color: #ff973b;
+}
+
+.mayask {
+  width: 90%;
+  height: 100rpx;
+  margin: auto;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mayask .img_1 {
+  width: 38rpx;
+  height: 37rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.mayask .img_2 {
+  width: 18rpx;
+  height: 30rpx;
+}
+
+.anewBtn {
+  width: 382rpx;
+  margin-top: 80rpx;
+  background: linear-gradient(#6eaff7, #6e9ff7);
+  color: white;
+  border-radius: 10rpx;
+  border: none;
+}
+
+.selfAsk {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.zezd {
+  width: 42rpx;
+  height: 42rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.rights {
+  width: 17rpx;
+  height: 35rpx;
+}
+
+.text_1 {
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.text_2 {
+  font-size: 28rpx;
+  color: #999;
+}
+
+
+.fastTitleBox{
+  width: 660rpx;
+  height: 88rpx;
+  padding: 0 53rpx;
+  line-height: 88rpx;
+  background: #f8f8f8f8;
+}
+.fastTitle{
+  font-size: 28rpx;
+  color: #ff7f29;
+}
+.fastBtn{
+  width: 136rpx;
+  height: 60rpx;
+  background: #6E9FF7;
+  color: #ffffff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 75rpx;
+  margin-top: 15rpx;
+}
+.lsitBox{
+  width: 92%;
+  margin: auto;
+  margin-top: 170rpx;
+}/* pages/audioList/audioList.wxss */
+

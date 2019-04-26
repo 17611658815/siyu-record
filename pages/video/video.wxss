@@ -1,0 +1,515 @@
+.content{
+ margin-bottom: 98rpx;
+}
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: #f8f8f8;
+}
+.color{
+  width: 100%;
+  background: #ffffff;
+}
+.doctorInfo{
+  background: #FFFFFF;
+}
+
+.videoTitle{
+  width: 92%;
+  margin: auto;
+  padding-top: 26rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.videoTitle>view:nth-child(1){
+  font-size: 34rpx;
+  color: #333333;
+  margin-bottom: 10rpx;
+}
+.videoTitle>view:nth-child(2)>text{
+  color: #999999;
+  font-size: 20rpx;
+}
+.videoTitle>view:nth-child(2)>text:nth-child(1){
+  margin-right: 5rpx;
+  font-size: 26rpx;
+}
+.videoTitle>view:nth-child(2)>text:nth-child(2){
+  margin-right: 5rpx;
+}
+.videoTitle>view:nth-child(2)>text:nth-child(3){
+  margin-right: 30rpx;
+}
+/* 专家信息 */
+.InfoBox{
+  width: 92%;
+  margin:auto;
+  display: flex;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  align-items: center;
+}
+.InfoBox>view:nth-child(1){
+  width: 90rpx;
+  height: 90rpx;
+}
+.InfoBox>view:nth-child(1) image{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.InfoBox>view:nth-child(2){
+  flex: 1;
+  margin-left: 38rpx;
+}
+.InfoBox>view:nth-child(2)>view:nth-child(1)>text:nth-child(1){
+  font-size: 32rpx;
+  color: #333333;
+  padding-right: 10rpx;
+}
+.InfoBox>view:nth-child(2)>view:nth-child(1)>text:nth-child(2){
+  font-size: 28rpx;
+  color: #666666;
+}
+.InfoBox>view:nth-child(2)>view:nth-child(2)>text:nth-child(1){
+  font-size: 28rpx;
+  color: #999999;
+  padding-right: 20rpx;
+}
+.InfoBox>view:nth-child(2)>view:nth-child(2)>text:nth-child(2){
+  font-size: 28rpx;
+  color: #999999;
+}
+/* 视频内容 */
+.title{
+  width: 92%;
+  margin: auto;
+  font-size: 32rpx;
+  color: #000000;
+}
+.title>view:nth-child(1){
+  padding-bottom: 25rpx;
+  font-size: 32rpx;
+  color: #000000;
+}
+.title>view:nth-child(2){
+  font-size: 28rpx;
+  padding-bottom: 50rpx;
+  color:#666666;
+  text-indent:2em;
+  line-height:1.8;
+  letter-spacing:1rpx;
+
+}
+/* 相关内容 */
+.recommended{
+  width: 100%;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.recommended-title{
+  width: 92%;
+  margin: auto;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  font-size: 32rpx;
+  color: #000000;
+  font-weight: 600
+}
+/* 推荐列表样式 */
+.msgList{
+  width: 100%;
+  background: #ffffff;
+}
+/* .msgList_box{
+  width: 90%;
+  margin: auto;
+  padding: 30rpx 0;
+} */
+.msgList_title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.msgList_title .video{
+  width: 50rpx;
+  height: 35rpx;
+  border: 1rpx solid #4cd093;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 35rpx;
+  color:#4cd093;
+  padding: 0 8rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.msgList_title .question{
+  width: 50rpx;
+  height: 35rpx;
+  border: 1rpx solid #ff952d;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 35rpx;
+  color:#ff952d;
+  padding: 0 8rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.msgList_title .audio{
+  width: 50rpx;
+  height: 35rpx;
+  border: 1rpx solid #4c9dee;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 35rpx;
+  color:#4c9dee;
+  padding: 0 8rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+.msgList_title .problem{
+  font-size: 32rpx;
+}
+.msgList_msg{
+  margin-top: 30rpx;
+}
+/* 问答样式 */
+.msgList_answer{
+  display: flex;
+  margin-top: 30rpx;
+}
+.msgList_answer .articles{
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #666666;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2; /** 显示的行数 **/
+  overflow: hidden;  /** 隐藏超出的内容 **/
+}
+.msgList_answer .article{
+  flex: 1;
+  font-size: 28rpx;
+  color: #666666;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2; /** 显示的行数 **/
+  overflow: hidden;  /** 隐藏超出的内容 **/
+}
+.msgList_answer image{
+  width: 30rpx;
+  height: 35rpx;
+  margin-top: 10rpx;
+}
+.msgList_title image{
+  width: 30rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+/* 问答样式 */
+
+/* 音频样式 */
+.msgList_audio{
+  display: flex;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.msgList_audio .answerlogo{
+  width: 32rpx;
+  height: 35rpx;
+}
+.msgList_audio .audio_time{
+  width: 424rpx;
+  height: 64rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 8rpx;
+  margin-left: 20rpx;
+}
+.audio_time image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.audio_time .timertext{
+  font-size: 24rpx;
+  color: #333333;
+  margin-left: 38rpx; 
+}
+.audio_time .timer{
+  font-size: 24rpx;
+  color: #f19536;
+  margin-left: 38rpx; 
+}
+.msgList_audio .audiohot{
+  width: 100rpx;
+  display: flex;
+  font-size: 22rpx;
+  color: #999999;
+  margin-left: 20rpx;
+}
+.msgList_audio .audiohot image{
+  width: 36rpx;
+  height: 26rpx;
+  margin-right: 2rpx;
+}
+
+/* 音频样式 */
+/* 文章样式 */
+.msgList_article{
+  flex: 1;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #666666;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 2; /* 显示的行数 */
+  overflow: hidden;  /** 隐藏*/
+}
+
+/* 文章样式 */
+
+.msgList_msg view:nth-child(1){
+  width: 92%;
+  margin: auto;
+  position: relative;
+}
+.msgList_msg view:nth-child(2){
+  flex: 1;
+  margin-left: 28rpx;
+  font-size: 28rpx;
+  color: #666666;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 4; /* 显示的行数 */
+  overflow: hidden;  /** 隐藏*/
+}
+.msgList_msg .docPic{
+
+  border-radius: 10rpx;
+  border: 1rpx solid #EEEEEE;
+}
+
+
+.msgList_msg .Listplay{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+}
+/* 音频 视频 问答 文章 各自样式 */
+.msgList_doctor{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.msgList_doctor text{
+  margin-left: 15rpx;
+}
+.msgList_doctor image{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+}
+.msgList_doctor .doctorName{
+  display: block;
+  font-size: 30rpx;
+  white-space: nowrap;
+  color: #333333;
+}
+.msgList_doctor .zhiwei{
+  display: block;
+  font-size: 28rpx;
+  color: #999999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.msgList_doctor .hospita{
+  display: block;
+  font-size: 28rpx;
+  color: #999999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.titles{
+  width: 92%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+.titles image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 10rpx;
+}
+.titles text:nth-child(2){
+  font-size: 32rpx;
+  color: #000000;
+  margin-left: 20rpx;
+  font-weight: 500;
+}
+.titles text:nth-child(3){
+  font-size: 26rpx;
+  color: #999999;
+  position: absolute;
+  right: 0;
+}
+
+
+
+.videoBox{
+  width:100%;
+  background:#ffffff;
+   border-bottom: 20rpx solid rgba(144,144,144,0.1)
+}
+.videoBox .msgList_box{
+  width:100%;
+  margin:auto;
+ 
+  /* padding-top:30rpx */
+}
+.videoBox .msgList_title{
+  width: 92%;
+  margin: auto;
+  display:flex;
+  padding-top: 20rpx;
+  align-items:center;
+  font-size:32rpx;
+  color:#333333;
+}
+.videoBox .msgList_msg image {
+  width:100%;
+ 
+  height:390rpx;
+
+}
+.videoBox .msgList_msg .times{
+  width:102rpx;
+  height:48rpx;
+  border-radius:44px;
+  background:rgba(0,0,0,.2);
+  font-size:26rpx;
+  text-align:center;
+  line-height:48rpx;
+  color:#ffffff;
+  position:absolute;
+  bottom:25rpx;
+  right:20rpx;
+}
+.videoBox .msgList_msg .Listplay{
+  width:70rpx;
+  height:70rpx;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+.videoBox .msgList_doctor{
+  width:92%;
+  display:flex;
+  margin:auto;
+  align-items:center;
+  padding-top:20rpx;
+  padding-bottom:40rpx;
+  /* border-bottom:1rpx solid #e2e2e2; */
+}
+/* .controls{
+  z-index: 99999
+} */
+.videoMag{
+  position: relative;
+}
+.Listplay{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999
+}
+.goindex{
+  width: 160rpx;
+  height: 60rpx;
+  border: 1rpx solid #ffffff;
+  color: #ffffff;
+  padding: 0 20rpx;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+   position:absolute;
+  left:50%;
+  top:75%;
+  transform:translate(-50%, -50%);
+  z-index: 99999;
+
+}
+.shade{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+   z-index: 9999
+}
+
+
+
+.active{
+  color: #6ea8f7;
+}
+.price{
+   width: 110rpx; 
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #ff3458;
+  font-size: 28rpx;
+  padding: 8rpx;
+  border-radius:40rpx 40rpx 40rpx 40rpx;
+  color: #ff3458;
+  text-align: center;
+}
+.videoLogoBox{
+   position: relative;
+  
+}
+.doclogo{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.timer{
+  width: 100rpx;
+  height: 60rpx;
+  color: #ffffff;
+  padding: 0 20rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 28rpx;
+   position:absolute;
+  left:50%;
+  top:65%;
+  transform:translate(-50%, -50%);
+  z-index: 99999;
+}

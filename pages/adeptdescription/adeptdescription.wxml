@@ -1,0 +1,12 @@
+ <view class="container">
+  <view class="areaBox">
+    <view class="inputBox">
+      <textarea class="input db" maxlength='-1' value='{{message}}' placeholder="请输入您的擅长描述..." placeholder-class="phcolor" bindinput="savemessage"></textarea>
+    </view>
+  </view>
+  <view class="submitBox">
+    <text class="submit db" bindtap="submitMsg">保 存</text>
+  </view>
+</view> 
+
+

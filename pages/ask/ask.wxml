@@ -1,0 +1,55 @@
+<!--pages/ask/ask.wxml-->
+<view class='contents' wx:if="{{code2 == false}}">
+  <view class='img_box2'> 
+    <image src='../../images/shenheshibai.png'></image>
+    <view class='titles1'>您的资质未通过审核,工作站暂时无法使用</view>
+    <view class='err'>
+      <text>审核未通过原因：</text>
+      <text>{{err}}</text>
+    </view>
+  </view>
+  <button class='anewBtn' bindtap='goUploadagain'>重新认证</button>
+</view>
+<view class='contents' wx:elif="{{code == false}}">
+ <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+      <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+      <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+    </view>
+  <view class='img_box'>
+    <image src='../../images/shenhezhong.png'></image>
+    <view>您的资质正在审核中,工作站暂时无法使用</view>
+  </view>
+</view>
+<scroll-view style='height:100%;width:100%;' scroll-y="true" wx:else>
+  <view class="fastTitleBox clearfix" wx:if="{{cooperation==''}}">
+    <text class="fastTitle db fl">您的医生资质尚未认证,赶快去认证吧~</text>
+    <text class="fastBtn db fr" bindtap="goCertification">去认证</text>
+  </view>
+  <view class="container">
+    <view class="cBody">
+      <text class="title db">设置门诊常见问题</text>
+      <view class='textareaBox'>
+        <textarea class="input db" auto-height="true" value="{{oldName}}" bindinput="askName" placeholder="请输入您在门诊时患者常问的问题~" placeholder-class="phcolor"></textarea>
+      </view>
+      <block wx:for="{{searchResultDatas}}" wx:key="key">
+        <view class="search-result-item">
+          <searchHighlightTextView class="result-item" datas='{{searchData[index]}}' bindtap="chooseSearchResultAction" data-val='{{item.title}}' />
+        </view>
+      </block>
+      <button class="changeBtn db" bindtap="saveName">提交</button>
+    </view>
+  </view>
+</scroll-view>
+<!-- 模态窗口 -->
+<view class='tost' style="display:{{ishide}}">
+  <view class='tost_box'>
+    <view class='top'>
+      <image src='../../images/succeed.png'></image>
+      <view>提交成功</view>
+    </view>
+    <view class='btom'>
+      <text style='border-right:1rpx solid #d1d1d1;color:#666666' bindtap="gotoSetNew">设置新问题</text>
+      <text style='color:#333333' bindtap="gotoRecord">立即回答</text>
+    </view>
+  </view>
+</view>

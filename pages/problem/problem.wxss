@@ -1,0 +1,24 @@
+
+.problem{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background:#FFFFFF;
+}
+.problem .problemList{
+  width: 90%;
+  margin: auto;
+  margin-top: 50rpx;
+}
+.problem .problemList view:nth-child(1){
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.problem .problemList view:nth-child(2){
+  font-size: 28rpx;
+  color: #898989;
+  line-height: 50rpx
+}
+  

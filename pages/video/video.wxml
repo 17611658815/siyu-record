@@ -1,0 +1,51 @@
+<view class="content">
+  <view class="page-body">
+    <view class='contentBox'>
+      <view class='videoMag' wx:if="{{!boXShow}}">
+        <video id='video' bindended="bindended" bindplay='bindplay' autoplay="{{isplay}}" src="{{videoMsg.shipin}}" objectFit="cover" controls style="width:100%;height:{{autoHeight}}px;">
+        </video>
+      </view>
+      <view class='videoLogoBox' style="width:100%;height:{{autoHeight}}px;" wx:if="{{boXShow}}">
+        <image class='doclogo' src='{{videoMsg.thumb}}'></image>
+        <image class='Listplay' wx:if="{{videoMsg.title!=undefined}}" bindtap='repPlay' src='../../images/Listplay.png'></image>
+        <view class='shade' wx:if="{{videoMsg.title!=undefined}}"></view>
+        <view class='timer' wx:if="{{!goIndex}}">{{videoMsg.shipin.duration}}</view>
+      </view>
+      <view class='color'>
+        <view class='videoTitle'>
+          <view>{{videoMsg.title}}</view>
+          <view>
+            <text>{{videoMsg.created}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='doctorInfo'>
+        <view class='InfoBox' wx:if="{{videoMsg.doctor!=false}}" data-id="{{videoMsg.doctor.id}}" bindtap='gomfk'>
+          <view>
+            <image src='{{videoMsg.doctor.avatar}}'></image>
+          </view>
+          <view>
+            <view>
+              <text>{{videoMsg.doctor.name}}</text>
+              <text>{{videoMsg.doctor.position}}</text>
+            </view>
+            <view>
+              <text>{{videoMsg.doctor.hospital}}</text>
+              <text>{{videoMsg.doctor.department}}</text> </view>
+          </view>
+        </view>
+        <view style='height:30rpx' wx:if="{{videoMsg.doctor==false}}"></view>
+        <view class='title'>
+          <view>
+            视频内容
+          </view>
+          <view>
+            <view wx:for="{{videoMsg.content}}" wx:key='key'>{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>

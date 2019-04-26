@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/status/status",
+    "pages/flow/flow",
+    "pages/record/record",
+    "pages/answer/answer",
+    "pages/agreement/agreement",
+    "pages/center/center",
+    "pages/information/information",
+    "pages/problem/problem",
+    "pages/gochooseAbank/gochooseAbank",
+    "pages/feedback/feedback",
+    "pages/signature/signature",
+    "pages/recordingHint/recordingHint",
+    "pages/register/register",
+    "pages/nextStep/nextStep",
+    "pages/review/review",
+    "pages/mayinformation/mayinformation",
+    "pages/addadept/addadept",
+    "pages/identification/identification",
+    "pages/individualresume/individualresume",
+    "pages/adeptdescription/adeptdescription",
+    "pages/audioMsg/audioMsg",
+    "pages/ask/ask",
+    "pages/askList/askList",
+    "pages/Uploadagain/Uploadagain",
+    "pages/Toanswer/Toanswer",
+    "pages/skip/skip",
+    "pages/certification/certification",
+    "pages/audioList/audioList",
+    "pages/Videoappointments/Videoappointments",
+    "pages/article/article",
+    "pages/video/video",
+    "pages/publisharticle/publisharticle",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#6ea8f7",
+    "navigationBarTitleText": "民福康医生",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxd8fd4122d8ed38e9"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

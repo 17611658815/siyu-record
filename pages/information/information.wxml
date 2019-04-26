@@ -1,0 +1,14 @@
+
+<!--信息页面  -->
+<view class='informmation' wx:if="{{msgList.length>0}}">
+  <view class='content' wx:for="{{msgList}}">
+    <text class='timer'>{{item.created}}</text>
+    <text class='mssage'>{{item.msg}}</text>
+  </view>
+</view>
+<view class="noClass" wx:else>
+  <view class="noClassBox">
+    <image class="noting db" src="../../images/kb.png"></image>
+    <text class="prompt db">您当前没有新消息！</text>
+  </view>
+</view>
